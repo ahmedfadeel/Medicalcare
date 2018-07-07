@@ -1,6 +1,21 @@
 # Medicalcare
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.6.
+#Prerequisites
+You need git to clone the seed-angular repository.
+
+You will need Node.js and npm.
+
+#Clone Medicalcare
+Clone the seed-angular repository using git:
+
+[git clone] (https://github.com/ahmedfadeel/Medicalcare.git)
+'cd seed-angular'
+If you just want to start a new project without the seed-angular commit history then you can do.
+
+#Install Dependencies
+To install the dependencies you must run:
+Run 'npm install'.
 ## project  functionality 
 **The general page breakdown looks like this:**
 
@@ -25,21 +40,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 -search doctor  page 
     -serch patient by department or name or id.
 
-#Prerequisites
-You need git to clone the seed-angular repository.
 
-You will need Node.js and npm.
-
-#Clone Medicalcare
-Clone the seed-angular repository using git:
-
-[git clone] (https://github.com/ahmedfadeel/Medicalcare.git)
-'cd seed-angular'
-If you just want to start a new project without the seed-angular commit history then you can do.
-
-#Install Dependencies
-To install the dependencies you must run:
-Run 'npm install'.
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
