@@ -1,12 +1,12 @@
 # Medicalcare
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.6.
-#Prerequisites
+##Prerequisites
 You need git to clone the seed-angular repository.
 
 You will need Node.js and npm.
 
-#Clone Medicalcare
+##Clone Medicalcare
 Clone the seed-angular repository using git:
 
 [git clone] (https://github.com/ahmedfadeel/Medicalcare.git)
