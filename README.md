@@ -13,13 +13,13 @@ You will need Node.js and npm.
 Clone the seed-angular repository using git:
 
 [git clone](https://github.com/ahmedfadeel/Medicalcare.git)
-> 'cd seed-angular'
+`cd seed-angular`
 If you just want to start a new project without the seed-angular commit history then you can do.
 
 ## Install Dependencies
 
 To install the dependencies you must run:
-Run > 'npm install'.
+Run  `npm install`.
 ## project  functionality 
 **The general page breakdown looks like this:**
 
