@@ -1,12 +1,14 @@
 # Medicalcare
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.6.
+
 ##Prerequisites
 
 You need git to clone the seed-angular repository.
 
 You will need Node.js and npm.
-##Clone Medicalcare
+
+## Clone Medicalcare
 
 Clone the seed-angular repository using git:
 
@@ -14,7 +16,7 @@ Clone the seed-angular repository using git:
 'cd seed-angular'
 If you just want to start a new project without the seed-angular commit history then you can do.
 
-##Install Dependencies
+## Install Dependencies
 
 To install the dependencies you must run:
 Run 'npm install'.
