@@ -23,10 +23,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
     -update all doctor  personal information 
     -only doctor has access right to do   
 -search doctor  page 
-    -serch patient by department or name or id .
+    -serch patient by department or name or id.
 
-
-    
 ##Prerequisites
 You need git to clone the seed-angular repository.
 
@@ -37,14 +35,11 @@ Clone the seed-angular repository using git:
 
 [git clone] (https://github.com/ahmedfadeel/Medicalcare.git)
 'cd seed-angular'
-If you just want to start a new project without the seed-angular commit history then you can do:
-
-
+If you just want to start a new project without the seed-angular commit history then you can do.
 
 ##Install Dependencies
 To install the dependencies you must run:
-
-Run 'npm install'
+Run 'npm install'.
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
