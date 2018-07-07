@@ -1,0 +1,399 @@
+ <div class="page-header">
+                    <div class="page-head-img">
+                        <img src="images/page-header.jpg">
+                    </div><!-- End home-slider-Img -->
+                    <div class="container">
+                        <div class="page-head-head">
+                            <h3 class="title title-lg text-center">
+                             
+                            </h3><!--End title-->
+                        </div><!-- End Home-Slider-Head -->
+                        <div class="search-tabs">
+                            <form>
+                                <div class="choose-option">
+                                    <div class="form-group">
+                                        <i class="fa fa-user"></i>
+                                        <input class="form-control" list="doctor-name" type="text" placeholder="أبحث عن اسم الطبيب ">
+                                        <datalist id="doctor-name">
+                                            <option> عبد الحميد هشام</option>
+                                            <option>مصطفي العباسي</option>
+                                            <option>احمد وجيه </option>
+                                            <option>احمد العيسوي</option>
+                                        </datalist>
+                                    </div><!-- End Form-Group -->
+                                </div><!-- End Choose-Option -->
+                                <button class="custom-btn">ابحث</button>
+                            </form><!-- End Form -->
+                        </div><!-- End Search-Tabs -->
+                    </div><!-- End container -->
+                </div><!--End Page-head-->
+                
+                <div class="page-content">
+                    <section class="section-lg">
+                        <div class="container">
+                            <div class="row">
+                                <div class="tabs">
+                                    <div class="col-md-3">
+                                        <ul class="nav nav-tabs" role="tablist">
+                                            <li role="presentation" class="active">
+                                                <a href="#patient" aria-controls="patient" role="tab" data-toggle="tab">
+                                                    <i class="fa fa-user"></i>
+                                                    تسجيل للمريض 
+                                                </a>
+                                            </li>
+                                            <li role="presentation">
+                                                <a href="#doctor" aria-controls="doctor" role="tab" data-toggle="tab">
+                                                    <i class="fa fa-envelope"></i>
+                                                      تسجيل للطبيب
+                                                </a>
+                                            </li>
+                                           
+                                          </ul>
+                                        </div><!-- End col -->
+                                          <!-- Tab panes -->
+                                    <div class="col-md-7">
+                                        <div class="tab-content">
+                                            <div role="tabpanel" class="tab-pane active" id="patient">
+                                                <div class="white-box">
+                                        <div class="form-title">
+                                            <h3 class="title">
+                                                تسجيل حساب مريض
+                                            </h3>
+                                        </div>
+                                        <div class="alert alert-success" *ngIf="objectAdded">تمت عمليه الحفظ بنجاح</div>
+                                        <form class="form" >
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="name">
+                                                            <i class="fa fa-minus"></i>
+                                                            الأسم <span>*</span>
+                                                        </label>&nbsp;<span *ngIf="usernameisNull" style="color:red;">يجب ادخال الاسم  </span> &nbsp;<span *ngIf="usernameis_small" style="color:red;"> يجب ان يكون الاسم اكبر من حرفين   </span>
+                                                        <input type="text" id="name" class="form-control" name = "name" required [(ngModel)]="newPatient.name"     placeholder="اسم المريض"
+                                                     pattern="[a-z ِA-Z]{1,15}"
+                                                         title="من فضلك ادخل حرووف فقط "  >
+                                                    </div><!-- End Form-Group -->
+                                                </div><!-- End col -->
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="user-name">
+                                                            <i class="fa fa-minus"></i>
+                                                            اسم المستخدم <span>*</span>
+                                                        </label>&nbsp;<span &nbsp;<span *ngIf="usernameExists" style="color:red;"> محجوز اختر اسم اخر </span>
+                                                        <input type="text" id="user-name" class="form-control" name = "user=name"  required [(ngModel)]="newUser.username"  placeholder="اسم المستخدم"
+                                                     pattern="[a-z ِA-Z]{1,15}"
+                                                   title="اسم المستخدم يجب ان يكون حروف"  >
+                                                    </div><!-- End Form-Group -->
+                                                </div><!-- End col -->
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label>
+                                                            <i class="fa fa-minus"></i>
+                                                            الرقم القومي <span>*</span>
+                                                        </label>&nbsp;<span *ngIf="personalIdExists" style="color:red;">مستخدم بالفعل  </span> &nbsp;<span *ngIf="personalIdisNull" style="color:red;">يجب ادخال الرقم القومى </span>
+                                                        <input type="text" class="form-control" name = "personalId" id = "personalId" required [(ngModel)]="newPatient.personalId"placeholder="اسم المستخدم"
+                                                     pattern="[a-z ِA-Z]{1,15}"
+                                                   title=""  >
+                                                    </div><!-- End Form-Group -->
+                                                </div><!-- End col -->
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label>
+                                                            <i class="fa fa-minus"></i>
+                                                            العمر <span>*</span>
+                                                        </label>&nbsp;<span *ngIf="wrongebithDate" style="color:red;">يجب ادخال اريخ الميلاد بشكل صحيح   </span>
+                                                        <input type="date" class="form-control" name = "date" id = "date" required [(ngModel)]="newPatient.birthDate" placeholder="dd/mm/yy"
+                                                                                        pattern="[0-9]+"
+                                                                                   title="من فضلك ادخل ارقام فقط"  >
+                                                    </div><!-- End Form-Group -->
+                                                </div><!-- End col -->
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="name">
+                                                            <i class="fa fa-minus"></i>
+                                                            الهاتف <span>*</span>
+                                                        </label> &nbsp;<span *ngIf="wrongPhone" style="color:red;">رقم الهاتف غير صحيح  </span>
+                                                        <input type="tel" class="form-control" name = "phone" id = "phone" required [(ngModel)]="newPatient.phone" placeholder="0105489725"
+                                                                                        pattern="[0-9]+"
+                                                                                   title="من فضلك ادخل ارقام فقط"  >
+                                                    </div><!-- End Form-Group -->
+                                                </div><!-- End col -->
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="name">
+                                                            <i class="fa fa-minus"></i>
+                                                            البريد الإلكتروني  <span>*</span>
+                                                        </label> &nbsp;<span *ngIf="wrongemail" style="color:red;">البريد الإلكتروني غير صحيح  </span>
+                                                        <input type="email" class="form-control" name = "email" id ="email" required [(ngModel)]="newPatient.email" placeholder="abdelhameed@gmail.com"
+                                                                                      pattern="[^ @]+ @ [^ @]+ "
+                                                                                     title="email must be Any Ab54-/@Ab54- ">
+                                                    </div><!-- End Form-Group -->
+                                                </div><!-- End col -->
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="gender">
+                                                            <i class="fa fa-minus"></i>
+                                                            النوع <span>*</span>
+                                                        </label> 
+                                                           <input type="text" id = "gender" name = "gender" [(ngModel)]="newPatient.gender" class="form-control" required >
+                                                </div><!-- End col -->
+                                                      <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label for="city">
+                                                                      المدينه
+                                                                    </label>
+                                                                    <input type="text" id="city" class="form-control" name="city"  [(ngModel)]="newPatient.city"  placeholder="شبين الكوم"
+                                                                                      pattern="[a-z ِA-Z]{1,15}"
+                                                                                     title="يجب ادخال حرووف فقط">
+                                                                </div><!-- End Form-Group -->
+                                                           
+															<div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label for="address">
+                                                                      المحافظه 
+                                                                    </label>
+                                                                    <input type="text" id="address" name=" " class="form-control" name="goverment" [(ngModel)]="newPatient.goverment"  placeholder="المنوفيه"
+                                                                                         pattern="[a-z ِA-Z]{1,15}"
+                                                                                                    title="يجب ادخال حرووف فقط">
+                                                                </div><!-- End Form-Group -->
+															 </div><!-- End col -->	
+															<div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label for="street">
+                                                                      الشارع
+                                                                    </label>
+                                                                    <input type="text" id="address" class="form-control" name="street"   [(ngModel)]="newPatient.street"  laceholder="شارع البحر"
+                                                                                      pattern="[a-z ِA-Z]{1,15}"
+                                                                                     title="يجب ادخال حرووف فقط">
+                                                                </div><!-- End Form-Group -->
+                                                            </div><!-- End col -->
+															<div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label for="address">
+                                                                      المركز
+                                                                    </label>
+                                                                    <input type="text" id="address" class="form-control"  name="center"  [(ngModel)]="newPatient.center"  placeholder="شبين الكوم"
+                                                                                      pattern="[a-z ِA-Z]{1,15}"
+                                                                                     title="يجب ادخال حرووف فقط">
+                                                                </div><!-- End Form-Group -->
+                                                            </div><!-- End col -->
+                                                
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <input type="file" class="form-control upload" >
+                                                        <div class="chose-file ">
+                                                           &nbsp;<span *ngIf="uploadImagefailed" style="color:red;">حدث خطا اثناء تحميل الصوره   </span>
+														   <p class="p">قم برفع الصوره الشخصيه  <span style="color: #F00">*</span></p>
+                                                        </div>
+                                                        
+                                                    </div><!-- End Form-Group -->
+                                                </div><!-- End col -->
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="name">
+                                                            <i class="fa fa-minus"></i>
+                                                            كلمة المرور  <span>*</span>
+                                                        </label>
+                                                        <input type="password" class="form-control" name = "password" id="password" required [(ngModel)] = "newUser.password">
+                                                    </div><!-- End Form-Group -->
+                                                </div><!-- End col -->
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <button class="custom-btn btn-block" (click)="addPatient()" type="submit">
+                                                            تسجيل حساب جديد
+                                                        </button>
+                                                    </div><!-- End Form-Group -->
+                                                </div><!-- End col -->
+                                            </div><!-- End row -->
+                                            
+                                        </form><!-- End form -->
+                                    </div>
+                                            </div>
+                                            <div role="tabpanel" class="tab-pane" id="doctor">
+                                                <div class="white-box">
+                                        <div class="form-title">
+                                            <h3 class="title">
+                                            </h3>
+                                        </div>
+                                        <div class="alert alert-success" *ngIf="objectAdded">تمت عمليه الحفظ بنجاح</div>
+                                        <form class="form" >
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="name">
+                                                            <i class="fa fa-minus"></i>
+                                                            الأسم <span>*</span>
+                                                        </label>&nbsp;<span *ngIf="usernameisNull" style="color:red;">يجب ادخال الاسم  </span> &nbsp;<span *ngIf="usernameis_small" style="color:red;"> يجب ان يكون الاسم اكبر من حرفين   </span>
+                                                        <input type="text" id="name" class="form-control" name = "name" required [(ngModel)]="newDoctor.name"     placeholder="اسم المريض"
+                                                     pattern="[a-z ِA-Z]{1,15}"
+                                                         title="من فضلك ادخل حرووف فقط "  >
+                                                    </div><!-- End Form-Group -->
+                                                </div><!-- End col -->
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="user-name">
+                                                            <i class="fa fa-minus"></i>
+                                                            اسم المستخدم <span>*</span>
+                                                        </label>&nbsp;<span &nbsp;<span *ngIf="usernameExists" style="color:red;"> محجوز اختر اسم اخر </span>
+                                                        <input type="text" id="user-name" class="form-control" name = "user=name"  required [(ngModel)]="newDoctor.username"  placeholder="اسم المستخدم"
+                                                     pattern="[a-z ِA-Z]{1,15}"
+                                                   title="اسم المستخدم يجب ان يكون حروف"  >
+                                                    </div><!-- End Form-Group -->
+                                                </div><!-- End col -->
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label>
+                                                            <i class="fa fa-minus"></i>
+                                                            الرقم القومي <span>*</span>
+                                                        </label>&nbsp;<span *ngIf="personalIdExists" style="color:red;">مستخدم بالفعل  </span> &nbsp;<span *ngIf="personalIdisNull" style="color:red;">يجب ادخال الرقم القومى </span>
+                                                        <input type="text" class="form-control" name = "personalId" id = "personalId" required [(ngModel)]="newDoctor.personalId"placeholder="اسم المستخدم"
+                                                     pattern="[a-z ِA-Z]{1,15}"
+                                                   title=""  >
+                                                    </div><!-- End Form-Group -->
+                                                </div><!-- End col -->
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label>
+                                                            <i class="fa fa-minus"></i>
+                                                            العمر <span>*</span>
+                                                        </label>&nbsp;<span *ngIf="wrongebithDate" style="color:red;">يجب ادخال اريخ الميلاد بشكل صحيح   </span>
+                                                        <input type="date" class="form-control" name = "date" id = "date" required [(ngModel)]="newDoctor.birthDate" placeholder="dd/mm/yy"
+                                                                                        pattern="[0-9]+"
+                                                                                   title="من فضلك ادخل ارقام فقط"  >
+                                                    </div><!-- End Form-Group -->
+                                                </div><!-- End col -->
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="name">
+                                                            <i class="fa fa-minus"></i>
+                                                            الهاتف <span>*</span>
+                                                        </label> &nbsp;<span *ngIf="wrongPhone" style="color:red;">رقم الهاتف غير صحيح  </span>
+                                                        <input type="tel" class="form-control" name = "phone" id = "phone" required [(ngModel)]="newDoctor.phone" placeholder="0105489725"
+                                                                                        pattern="[0-9]+"
+                                                                                   title="من فضلك ادخل ارقام فقط"  >
+                                                    </div><!-- End Form-Group -->
+                                                </div><!-- End col -->
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="name">
+                                                            <i class="fa fa-minus"></i>
+                                                            البريد الإلكتروني  <span>*</span>
+                                                        </label> &nbsp;<span *ngIf="wrongemail" style="color:red;">البريد الإلكتروني غير صحيح  </span>
+                                                        <input type="email" class="form-control" name = "email" id ="email" required [(ngModel)]="newPatient.email" placeholder="abdelhameed@gmail.com"
+                                                                                      pattern="[^ @]+ @ [^ @]+ "
+                                                                                     title="email must be Any Ab54-/@Ab54- ">
+                                                    </div><!-- End Form-Group -->
+                                                </div><!-- End col -->
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="gender">
+                                                            <i class="fa fa-minus"></i>
+                                                            النوع <span>*</span>
+                                                        </label> 
+                                                           <input type="text" id = "gender" name = "gender" [(ngModel)]="newDoctor.gender" class="form-control" required >
+                                                </div><!-- End col -->
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="fauclty">
+                                                            <i class="fa fa-minus"></i>
+                                                            الكليه <span>*</span>
+                                                        </label> &nbsp;<span *ngIf="wrongefauclty" style="color:red;"> يجب ادخال الكليه    </span>
+                                                        <input type="text" id = "fauclty" name = "fauclty" [(ngModel)]="newDoctor.fauclty"class="form-control" required placeholder="طب المنوفيه"
+                                                                                         pattern="[a-z ِA-Z]{1,15}"
+                                                                                                    title="يجب ادخال حرووف فقط">
+                                                    </div><!-- End Form-Group -->
+                                                </div><!-- End col -->
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="department">
+                                                            <i class="fa fa-minus"></i> 
+                                                            التخصص <span>*</span>
+                                                        </label>&nbsp;<span *ngIf="wrongedepartment" style="color:red;"> يجب ادخال القسم الخاص بك   </span>
+                                                        <input type="text" class="form-control" id = "department" name = "gender" [(ngModel)]="newDoctor.department"  required placeholder="جراحه عام "
+                                                                                         pattern="[a-z ِA-Z]{1,15}"
+                                                                                                    title="يجب ادخال حرووف فقط">
+                                                    </div><!-- End Form-Group -->
+                                                </div><!-- End col -->
+                                                
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="address">
+                                                            <i class="fa fa-minus"></i>
+                                                             المحافظه  <span>*</span>
+                                                        </label>
+                                                        <input type="text" id="government" name="government" class="form-control" required [(ngModel)]="newDoctor.goverment" placeholder="المنوفيه"
+                                                                                         pattern="[a-z ِA-Z]{1,15}"
+                                                                                                    title="يجب ادخال حرووف فقط">
+                                                    </div><!-- End Form-Group -->
+                                                </div><!-- End col -->
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="address">
+                                                            <i class="fa fa-minus"></i>
+                                                             المركز  <span>*</span>
+                                                        </label>
+                                                        <input type="text" id="center" name = "center" class="form-control" required [(ngModel)]="newDoctor.center" placeholder="شبين الكوم"
+                                                                                      pattern="[a-z ِA-Z]{1,15}"
+                                                                                     title="يجب ادخال حرووف فقط">
+                                                    </div><!-- End Form-Group -->
+                                                </div><!-- End col -->
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="address">
+                                                            <i class="fa fa-minus"></i>
+                                                             المدينه  <span>*</span>
+                                                        </label>
+                                                        <input type="text" id="city" name = "city" class="form-control" required [(ngModel)]="newDoctor.city" placeholder="شبين الكوم"
+                                                                                      pattern="[a-z ِA-Z]{1,15}"
+                                                                                     title="يجب ادخال حرووف فقط">
+                                                    </div><!-- End Form-Group -->
+                                                </div><!-- End col -->
+												<div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label for="street">
+                                                                      الشارع
+                                                                    </label>
+                                                                    <input type="text" id="address" class="form-control" name="street"   [(ngModel)]="newPatient.street"  laceholder="شارع البحر"
+                                                                                      pattern="[a-z ِA-Z]{1,15}"
+                                                                                     title="يجب ادخال حرووف فقط">
+                                                                </div><!-- End Form-Group -->
+                                                            </div><!-- End col -->
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <input type="file" class="form-control upload" >
+                                                        <div class="chose-file ">
+                                                           
+														   &nbsp;<span *ngIf="uploadImagefailed" style="color:red;">حدث خطا اثناء تحميل الصوره   </span>
+														   <p class="p">قم برفع الصوره الشخصيه  <span style="color: #F00">*</span></p>
+                                                        </div>
+                                                        
+                                                    </div><!-- End Form-Group -->
+                                                </div><!-- End col -->
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="name">
+                                                            <i class="fa fa-minus"></i>
+                                                            كلمة المرور  <span>*</span>
+                                                        </label>
+                                                        <input type="password" class="form-control" name = "password" id="password" required [(ngModel)] = "newUser.password">
+                                                    </div><!-- End Form-Group -->
+                                                </div><!-- End col -->
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <button class="custom-btn btn-block" (click)="addDoctor()" type="submit">
+                                                            تسجيل حساب جديد
+                                                        </button>
+                                                    </div><!-- End Form-Group -->
+                                                </div><!-- End col -->
+                                            </div><!-- End row -->
+                                            
+                                        </form><!-- End form -->
+                                    </div>
+                                            </div>
+                                        </div>
+                                    </div><!-- End col -->        
+                                </div><!-- End Tabs -->
+                            </div><!-- End row -->
+                        </div><!-- End container -->
+                    </section><!-- End Section -->
+                </div><!--End page-content-->

@@ -1,0 +1,64 @@
+ <div class="page-head">
+                    <div class="page-head-img">
+                        <img src="images/page-header.jpg">
+                    </div><!-- End home-slider-Img -->
+                    <div class="container">
+                        <div class="page-head-head">
+                            <h3 class="title title-lg">
+                              ابحث عن الطبيب بالرقم القومى 
+                            </h3><!--End title-->
+                        </div><!-- End Home-Slider-Head -->
+                        <div class="search-tabs">
+                            <form>
+                                
+                                    <div class="form-group">
+                                        <i class="fa fa-user"></i>
+                                        <input class="form-control" [(ngModel)]="doctorID"  type="text" placeholder="ابحث عن الطبيب  ">
+                                        
+                                    </div><!-- End Form-Group -->
+                                
+                                <button class="custom-btn" (click)="ongetDoctor()">ابحث</button>
+								 <div *ngIf="notfound_Doctor" style="color:red;">
+									رقم طبييب خاطئ من فضلك ادخل رقم صحيح 
+									</div>
+								
+                            </form><!-- End Form -->
+                        </div><!-- End Search-Tabs -->
+                    </div><!-- End container -->
+                </div><!--End Page-head-->
+                
+                <div class="page-content">
+                    <section class="section-lg">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-10 col-md-offset-1" >
+                                    <div class="white-box"  *ngIf="!notfound_Doctor" > 
+
+                                        <div class="widget-doctor">
+                                            <div class="widget-head">
+                                                <img [src]="'http://localhost:8088/image/profiles/'+doctor.id+'.png'" alt="proile-pic">
+                                            </div><!--End Widget-head-->
+                                            <div class="widget-content">
+                                                <div class="widget-content-info">
+												 <h3> اضغط على اسم الطبيب للانتقال الى البروفايل  </h3>
+                                                    <a [routerLink]="['/profile-doctor']"
+		                                            [queryParams]="{doctorID:'doctor.id'}" class="custom-btn" > <h4 > اسم المريض :{{doctor.name}}</h4> </a>
+                                                    <p><span>تاريخ الميلاد:</span> {{doctor.birthDate}}</p>  
+													<p><span>رقم الهاتف </span> {{doctor.phone}}</p>  
+													<p><span>عنوان العياده :</span> {{doctor.clinicGoverment}}  ::  {{doctor.clinikCity}}:: {{doctor.clinicStreet}}</p> 
+													 
+                                                    
+                                                   
+													
+                                                </div><!--End Widget-content-info-->
+                                                
+                                            </div><!--End Widget-content-->
+                                        </div><!--End Widget-doctor-->
+                                    </div><!--End White-box-->
+                                    
+                                </div><!-- End col -->
+                            </div><!-- End row -->
+                            
+                        </div><!-- End container -->
+                    </section><!-- End Section -->
+                </div><!--End page-content-->

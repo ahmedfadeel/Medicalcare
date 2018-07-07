@@ -1,0 +1,68 @@
+ <div class="page-head">
+                    <div class="page-head-img">
+                        <img src="images/page-header.jpg">
+                    </div><!-- End home-slider-Img -->
+                    <div class="container">
+                        <div class="page-head-head">
+                            <h3 class="title title-lg">
+                              ابحث عن المريض بالرقم القومى
+                            </h3><!--End title-->
+                        </div><!-- End Home-Slider-Head -->
+                        <div class="search-tabs">
+                            <form>
+                                
+                                    <div class="form-group">
+                                        <i class="fa fa-user"></i>
+                                        <input class="form-control" [(ngModel)]="patientID"  type="text" placeholder="ابحث عن المريض ">
+                                        
+                                    </div><!-- End Form-Group -->
+                                
+                                <button class="custom-btn" (click)="ongetPatient()">ابحث</button>
+								<div *ngIf="notfound_Patient" style="color:red;">
+										 رقم مريض خاطىء من فضلك ادخل رقم صحيح 
+									</div>
+                            </form><!-- End Form -->
+                        </div><!-- End Search-Tabs -->
+                    </div><!-- End container -->
+                </div><!--End Page-head-->
+                
+                <div class="page-content">
+                    <section class="section-lg">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-10 col-md-offset-1">
+								   <div class="tab-content" >
+                                        <div role="tabpanel" class="tab-pane active" >
+                                    <div class="white-box" *ngIf="!notfound_Patient" >
+                                       
+                                          
+                                                <img [src]="'http://localhost:8088/image/profiles/'+patient.id+'.png'" alt="..."/>
+                                          
+                                              
+                                                
+												 <h3> اضغط على اسم المريض للانتقال الى البرفايل </h3>
+                                                   
+		                                            
+												 <a [routerLink]="['/profile-patient']"	[queryParams]="{patientID:'patient.id' }" class="custom-btn" >  اسم المريض :{{patient.name}} </a>
+												
+												  
+                                                    <p><span>تاريخ الميلاد:</span> {{patient.birthDate}}</p>  
+													<p><span>رقم الهاتف </span> {{patient.phone}}</p>  
+													<p><span>النوع:</span> {{patient.gender}}</p> 
+													<p><span>الايميل:</span> {{patient.email}}</p>
+													<p><span>الطول:</span> {{patient.length}}</p> 
+													<p><span>الوزن:</span> {{patient.weight}}</p> 
+                                                    
+                                                   
+													
+                                    </div><!--End White-box-->
+									</div> <!-- End tab-pane -->
+                                        
+                                    </div> <!-- End tab-content -->
+                                    
+                                </div><!-- End col -->
+                            </div><!-- End row -->
+                            </div>
+                        
+                    </section><!-- End Section -->
+                </div><!--End page-content-->

@@ -1,0 +1,95 @@
+<div class="page-header">
+                    <div class="container">
+                        <ol class="breadcrumb">
+                            <li><a routerLink="/">الرئيسية</a></li>
+                            <li  class="active">تسجيل حساب</li>
+                        </ol>
+                    </div><!-- End container -->
+                </div>
+                <div class="page-content">
+                    <section class="section-lg">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-8 col-md-offset-2">
+                                    <div class="white-box">
+                                        <div class="form-title">
+                                            <h3 class="title">
+                                              
+                                                تسجيل حساب طبيب
+                                            </h3>
+                                        </div>
+                                        <form class="form" (ngSubmit)="onsighUp_doctor()">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <input type="text" id="name" class="form-control" placeholder="الأسم الأول" required [(ngModel)]="localDoctor.FName" name="FName">
+                                                    </div><!-- End Form-Group -->
+                                                </div><!-- End col -->
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control" placeholder="الأسم لأخير" required [(ngModel)]="localDoctor.lName" name="lName">
+                                                    </div><!-- End Form-Group -->
+                                                </div><!-- End col -->
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <input type="tel" class="form-control" placeholder="رقم الهاتف" required [(ngModel)]="localDoctor.phoneNumber" name="phoneNumber">
+                                                    </div><!-- End Form-Group -->
+                                                </div><!-- End col -->
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <input type="email" class="form-control" placeholder="البريد الإلكترونى" required [(ngModel)]="localDoctor.email" name="email">
+                                                    </div><!-- End Form-Group -->
+                                                </div><!-- End col -->
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <select class="form-control"[(ngModel)]="localDoctor.city" name="city">
+                                                            <option selected value="">المدينة</option>
+                                                            <option value="cairo">القاهرة</option>
+                                                            <option value="tanta">طنطا</option>
+                                                            <option value="menoufia">المنوفيه</option>
+                                                            <option value="Esamaalia">الاسماعيليه</option>
+                                                            <option value="helwan">حلوان</option>
+                                                            
+                                                            <option value="Bor said">بورسعيد</option>
+                                                            <option value="Elswais">السويس</option>
+                                                        </select>
+                                                    </div><!-- End Form-Group -->
+                                                </div><!-- End col -->
+                                               
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <input type="file" class="form-control upload" name="bookImage" (change)="upload-image.service.fileChangeEvent($event)" >
+                                                        <div class="chose-file ">
+                                                           <p class="p">رخصة مزاوة المهنة</p>
+                                                        </div>
+                                                       
+                                                    </div><!-- End Form-Group -->
+                                                </div><!-- End col -->
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <input type="password" class="form-control" placeholder="كلمة السر" [(ngModel)]="localDoctor.password" name="password">
+                                                    </div><!-- End Form-Group -->
+                                                </div><!-- End col -->
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <input type="password" class="form-control" placeholder="تأكيد كلمة السر" [(ngModel)]="localDoctor.password" name="password">
+                                                    </div><!-- End Form-Group -->
+                                                </div><!-- End col -->
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <button class="custom-btn btn-block" type="submit">
+                                                            تسجيل حساب جديد
+                                                        </button>
+                                                    </div><!-- End Form-Group -->
+                                                </div><!-- End col -->
+                                            </div><!-- End row -->
+                                            
+                                        </form><!-- End form -->
+                                    </div>
+                                </div><!-- End col -->
+                            
+                            </div><!-- End row -->
+                            
+                        </div><!-- End container -->
+                    </section><!-- End Section -->
+                </div><!--End page-content-->

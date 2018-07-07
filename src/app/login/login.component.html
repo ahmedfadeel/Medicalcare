@@ -1,0 +1,63 @@
+<div class="page-header">
+                    <div class="container">
+                        <ol class="breadcrumb">
+                            <li><a  routerLink="/">الرئيسية</a></li>
+                            <li class="active">تسجيل دخول</li>
+                        </ol>
+                    </div><!-- End container -->
+                </div>
+                <div class="page-content">
+                    <section class="section-lg">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-6 col-md-offset-3">
+                                    <div class="white-box">
+                                        <div class="form-title">
+                                            <h3 class="title">
+                                               تسجيل الدخول
+                                            </h3>
+                                        </div>
+                                        <form class="form" >
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <input type="text" name="name" id="name" class="form-control" placeholder="الأسم " required [(ngModel)]="credential.username">
+                                                    </div><!-- End Form-Group -->
+                                                </div><!-- End col -->
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <input type="password" name = "password" id="password" class="form-control" placeholder="كلمة السر" [(ngModel)]="credential.password">
+                                                    </div><!-- End Form-Group -->
+                                                </div><!-- End col -->
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                    <a  routerLink="/">
+                                                        <button class="custom-btn btn-block" (click)="onSumit()" type="submit">
+
+                                                            تسجيل  الدخول
+                                                        </button>
+                                                    </a>
+                                                    </div><!-- End Form-Group -->
+                                                </div><!-- End col -->
+                                                <div class="col-md-12">
+                                                    <div class="or">
+                                                        <span>أو</span>
+                                                    </div>
+                                                </div><!-- End col -->
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                     <a  routerLink="/signuppatient">    
+                                                        <button class="custom-btn facebook-btn btn-block">
+                                                             قم بانشاء حساب جديد  
+                                                        </button>
+                                                      </a>  
+                                                    </div><!-- End Form-Group -->
+                                                </div><!-- End col -->
+                                            </div><!-- End row -->
+                                        </form><!-- End form -->
+                                    </div>
+                                </div><!-- End col -->
+                            </div><!-- End row -->
+                        </div><!-- End container -->
+                    </section><!-- End Section -->
+                </div><!--End page-content-->

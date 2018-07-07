@@ -1,0 +1,26 @@
+.nav-tabs > li.active::before{
+	content: "";
+	right: -37px;
+	border-left: 1px solid #e5e5e5;
+	transform: rotate(-46deg);
+	left: auto;
+	border-right: none;
+}
+.form.person-info .form-group label::before{
+	content: "";
+	left: -18px;
+	right: auto;
+}
+.conc::after{
+	content: "";
+	left: 0;
+	right: auto;
+}
+.widget-doctor .widget-head{
+	margin-right: 30px;
+	margin-left: 0
+}
+.form-group .file-btn .custom-btn{
+	right: 8px;
+	left: auto;
+}

@@ -1,0 +1,257 @@
+<div class="page-header">
+                    <div class="container">
+                        <ol class="breadcrumb">
+                            <li><a routerLink="/about-us">الرئيسيه</a></li>
+                            <li class="active"> تعديل الملف الشخصى</li>
+                        </ol>
+                    </div><!-- End container -->
+                </div>
+                <div class="page-content">
+                    <section class="section-lg">
+                        <div class="container">
+                            <div class="row">
+                                <div class="tabs">
+                                    <div class="col-md-3">
+                                        <ul class="nav nav-tabs" role="tablist">
+                                            <li role="presentation" class="active">
+                                                <a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">
+                                                    <i class="fa fa-user"></i>
+                                                           المعلومات الشخصيه
+                                                </a>
+                                            </li>
+                                            <li role="presentation">
+                                                <a href="#contact-info" aria-controls="contact-info" role="tab" data-toggle="tab">
+                                                    <i class="fa fa-envelope"></i>
+                                                     معلومات التواصل
+                                                </a>
+                                            </li>
+                                            <li role="presentation">
+                                                <a href="#password" aria-controls="password" role="tab" data-toggle="tab">
+                                                    <i class="fa fa-lock"></i>
+                                                   كلمه المرور
+                                                </a>
+                                            </li>
+                                          </ul>
+                                        </div><!-- End col -->
+                                          <!-- Tab panes -->
+                                    <div class="col-md-7">
+                                        <div class="tab-content">
+                                            <div role="tabpanel" class="tab-pane active" id="profile">
+                                                <div class="white-box">
+                                                    <div class="form-title">
+                                                        <h3 class="title">
+                                                             المعلومات الشخصيه
+                                                        </h3>
+                                                    </div>
+                                                    <form class="form person-info">
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <div class="form-group">
+                                                                    <label for="name">
+                                                                       الاسم
+                                                                    </label>
+                                                                    <input type="text" id="name" name="name" [(ngModel)]="doctor.name" class="form-control"  placeholder="اسم الطبيب"
+                                                                                        pattern="[a-z ِA-Z]{1,15}"
+                                                                                   title="ادخل حروف فقط"  >
+                                                                </div><!-- End Form-Group -->
+                                                            </div><!-- End col -->
+                                                            
+                                                            
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label for="address">
+                                                                         المحافظه  <span>*</span>
+                                                                    </label>
+                                                                    <input type="text" id="government" name="government" class="form-control" required [(ngModel)]="doctor.goverment" placeholder="المنوفيه"
+                                                                                         pattern="[a-z ِA-Z]{1,15}"
+                                                                                                    title="يجب ادخال حرووف فقط">
+                                                                </div><!-- End Form-Group -->
+                                                            </div><!-- End col -->
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label for="address">
+                                                                         المركز  <span>*</span>
+                                                                    </label>
+                                                                    <input type="text" id="center" name = "center" class="form-control" required [(ngModel)]="doctor.center" placeholder="شبين الكوم"
+                                                                                      pattern="[a-z ِA-Z]{1,15}"
+                                                                                     title="يجب ادخال حرووف فقط">
+                                                                </div><!-- End Form-Group -->
+                                                            </div><!-- End col -->
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label for="address">
+                                                                         المدينه  <span>*</span>
+                                                                    </label>
+                                                                    <input type="text" id="city" name = "city" class="form-control" required [(ngModel)]="doctor.city" placeholder="شبين الكوم"
+                                                                                      pattern="[a-z ِA-Z]{1,15}"
+                                                                                     title="يجب ادخال حرووف فقط" >
+                                                                </div><!-- End Form-Group -->
+                                                            </div><!-- End col -->
+                                                            
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label for="address">
+                                                                      الشارع
+                                                                    </label>
+                                                                    <input type="text" id="address" name="street" class="form-control" [(ngModel)]="doctor.street"  placeholder="شارع البحر"
+                                                                                      pattern="[a-z ِA-Z]{1,15}"
+                                                                                     title="يجب ادخال حرووف فقط">
+                                                                </div><!-- End Form-Group -->
+                                                            </div><!-- End col -->
+                                                            <div class="col-md-12">
+                                                                <div class="form-group">
+                                                                    <label for="otherInfo">
+                                                                        معلومات اخرى
+                                                                    </label>
+                                                                    <input type="text" id="otherInfo" name="oterInfo"  [(ngModel)]="doctor.otherInfo" class="form-control" >
+                                                                </div><!-- End Form-Group -->
+                                                            </div><!-- End col -->
+                                                            <div class="col-md-12">
+                                                                <div class="form-group">
+                                                                    <button class="custom-btn btn-block" type="submit" (click)="update_personal_information()">
+                                                                       تعديل 
+                                                                    </button>
+                                                                </div><!-- End Form-Group -->
+                                                            </div><!-- End col -->
+                                                        </div><!-- End row -->
+                                                    </form><!-- End form -->
+                                                </div>
+                                            </div>
+                                            <div role="tabpanel" class="tab-pane" id="contact-info">
+                                                <div class="white-box">
+                                                    <div class="form-title">
+                                                        <h3 class="title">
+                                                            معلومات التواصل
+                                                        </h3>
+                                                    </div>
+                                                    <form class="form person-info" >
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <div class="form-group">
+                                                                    <label for="email">
+                                                                        البريد الالكترونى
+                                                                    </label>
+                                                                    <input type="email" id="email" name="email" class="form-control" [(ngModel)]="doctor.email"  placeholder="abdelhameed@gmail.com"
+                                                                                      pattern="[^ @]+ @ [^ @]+ "
+                                                                                     title="email must be Any Ab54-/@Ab54- ">
+                                                                </div><!-- End Form-Group -->
+                                                            </div><!-- End col -->
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label for="phone">
+                                                                        رقم الهاتف
+                                                                    </label>
+                                                                    <input type="tel" id="phone" name="phone" class="form-control"  [(ngModel)]="doctor.phone"  placeholder="010548759"
+                                                                                      pattern="[0-9]{10:13} "
+                                                                                     title="ادخل رقم هاتف صحيح">
+                                                                </div><!-- End Form-Group -->
+                                                            </div><!-- End col -->
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label for="clinikCity">
+                                                                        مدينه العياده
+                                                                    </label>
+                                                                    <input type="text" id="clinikCity" class="form-control" name="clinkc" [(ngModel)]="doctor.clinikCity"  placeholder="شبين الكوم"
+                                                                                      pattern="[a-z ِA-Z]{1,15}"
+                                                                                     title="يجب ادخال حرووف فقط">
+                                                                </div><!-- End Form-Group -->
+                                                            </div><!-- End col -->
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label for="clinicStreet">
+                                                                       شارع العياده
+                                                                    </label>
+                                                                    <input type="text" id="clinicStreet"  [(ngModel)]="doctor.clinicStreet" name="clinks" class="form-control" placeholder="شارع البحر"
+                                                                                      pattern="[a-z ِA-Z]{1,15}"
+                                                                                     title="يجب ادخال حرووف فقط">
+                                                                </div><!-- End Form-Group -->
+                                                            </div><!-- End col -->
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label for="clinicStreet">
+                                                                       مركز العياده
+                                                                    </label>
+                                                                    <input type="text" id="clinicCenter"  [(ngModel)]="doctor.clinicCenter" name="clinicCenter" class="form-control"  placeholder="شبين الكوم"
+                                                                                      pattern="[a-z ِA-Z]{1,15}"
+                                                                                     title="يجب ادخال حرووف فقط">
+                                                                </div><!-- End Form-Group -->
+                                                            </div><!-- End col -->
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label for="clinicGoverment">
+                                                                       محافظه العياده
+                                                                    </label>
+                                                                    <input type="text" id="clinicGoverment"  [(ngModel)]="doctor.clinicGoverment" name="clinkg" class="form-control" 
+                                                                    placeholder="المنوفيه"
+                                                                                         pattern="[a-z ِA-Z]{1,15}"
+                                                                                                    title="يجب ادخال حرووف فقط">
+                                                                </div><!-- End Form-Group -->
+                                                            </div><!-- End col -->
+                                                            <div class="col-md-12">
+                                                                <div class="form-group">
+                                                                    <button class="custom-btn btn-block" type="submit" (click)="update_communication_information()">
+                                                                       تعديل
+                                                                    </button>
+                                                                </div><!-- End Form-Group -->
+                                                            </div><!-- End col -->
+                                                        </div> <!-- End Row -->
+                                                    </form>
+                                                </div>
+                                            </div>
+                                             <div role="tabpanel" class="tab-pane" id="password">
+                                                 <div class="white-box">
+                                                     <div class="form-title">
+                                                        <h3 class="title">
+                                                            كلمه المرور
+                                                        </h3>
+                                                    </div>
+                                                    <form class="form person-info" >
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <div class="form-group">
+                                                                    <input type="file" class="form-control upload" id="bookImage" (change)="uploadImageService.fileChangeEvent($event)">
+                                                                    <div class="chose-file ">
+                                                                       <p class="p">تحميل الصوره الشخصيه</p>
+                                                                    </div>
+                                                                    
+                                                                </div><!-- End Form-Group -->
+                                                            </div><!-- End col -->
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label for="username">
+                                                                        اسم المستخدم 
+                                                                    </label>
+                                                                    <input type="text" id="username" name="userName" [(ngModel)]="user.username" class="form-control" placeholder="اسم المستخدم"
+                                                                            pattern="[a-z ِA-Z]{1,15}"
+                                                                                title="اسم المستخدم يجب ان يكون حروف"  >
+                                                                </div><!-- End Form-Group -->
+                                                            </div><!-- End col -->
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label for="password">
+                                                                        كلمه المرور
+                                                                    </label>
+                                                                    <input type="password" id="password" name="pass" [(ngModel)]="user.password" class="form-control" value="test" >
+                                                                </div><!-- End Form-Group -->
+                                                            </div><!-- End col -->
+															<div class="col-md-12">
+                                                                <div class="form-group">
+                                                                    <button class="custom-btn btn-block" type="submit" (click)="update_image_andPassword()">
+                                                                       تعديل
+                                                                    </button> 
+																	
+																	<div class="alert alert-success" *ngIf="update_succeded">تم التعديل بنجاح </div>
+								
+                                                                </div><!-- End Form-Group -->
+                                                            </div><!-- End col -->
+                                                         </div> <!-- End Row -->
+                                                     </form>   
+                                                 </div>
+                                            </div>
+                                        </div>
+                                    </div><!-- End col -->        
+                                </div><!-- End Tabs -->
+                            </div><!-- End row -->
+                        </div><!-- End container -->
+                    </section><!-- End Section -->
+                </div><!--End page-content-->

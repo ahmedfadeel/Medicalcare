@@ -1,0 +1,157 @@
+ <div class="main">   
+                <div class="page-header">
+                    <div class="container">
+                        <ol class="breadcrumb">
+                            <li><a href="#">الرئيسية</a></li>
+                            <li class="active">تسجيل حساب</li>
+                        </ol>
+                    </div><!-- End container -->
+                </div>
+                <div class="page-content">
+                    <section class="section-lg">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-8 col-md-offset-2">
+                                    <div class="white-box">
+                                        <div class="form-title">
+                                            <h3 class="title">
+                                                تسجيل حساب جديد
+                                            </h3>
+                                        </div>
+                                        <div class="alert alert-success" *ngIf="PatientAdded">تمت عمليه الحفظ بنجاح</div>
+                                        <form class="form" >
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="name">
+                                                            <i class="fa fa-minus"></i>
+                                                            الأسم <span>*</span>
+                                                        </label>
+                                                        <input type="text" id="name" class="form-control" name = "name" required [(ngModel)]="newPatient.name">
+                                                    </div><!-- End Form-Group -->
+                                                </div><!-- End col -->
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="user-name">
+                                                            <i class="fa fa-minus"></i>
+                                                            اسم المستخدم <span>*</span>
+                                                        </label>&nbsp;<span *ngIf="usernameExistsPatient" style="color:red;"> محجوز اختر اسم اخر </span>
+                                                        <input type="text" id="user-name" class="form-control" name = "user=name"  required [(ngModel)]="newUser.username">
+                                                    </div><!-- End Form-Group -->
+                                                </div><!-- End col -->
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label>
+                                                            <i class="fa fa-minus"></i>
+                                                            الرقم القومي <span>*</span>
+                                                        </label>&nbsp;<span *ngIf="personalIdExistsPatient" style="color:red;">مستخدم بالفعل  </span>
+                                                        <input type="text" class="form-control" name = "personalId" id = "personalId" required [(ngModel)]="newPatient.personalId">
+                                                    </div><!-- End Form-Group -->
+                                                </div><!-- End col -->
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label>
+                                                            <i class="fa fa-minus"></i>
+                                                            العمر <span>*</span>
+                                                        </label>
+                                                        <input type="date" class="form-control" name = "date" id = "date" required [(ngModel)]="newPatient.birthDate">
+                                                    </div><!-- End Form-Group -->
+                                                </div><!-- End col -->
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="name">
+                                                            <i class="fa fa-minus"></i>
+                                                            الهاتف <span>*</span>
+                                                        </label>
+                                                        <input type="tel" class="form-control" name = "phone" id = "phone" required [(ngModel)]="newPatient.phone">
+                                                    </div><!-- End Form-Group -->
+                                                </div><!-- End col -->
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="name">
+                                                            <i class="fa fa-minus"></i>
+                                                            البريد الإلكتروني  <span>*</span>
+                                                        </label>
+                                                        <input type="email" class="form-control" name = "email" id ="email" required [(ngModel)]="newPatient.email">
+                                                    </div><!-- End Form-Group -->
+                                                </div><!-- End col -->
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="gender">
+                                                            <i class="fa fa-minus"></i>
+                                                            النوع <span>*</span>
+                                                        </label>
+                                                        <select class="form-control" id = "gender" name = "gender" [(ngModel)]="newPatient.gender">
+                                                            <option>ذكر</option>
+                                                            <option>انثي</option>
+                                                        </select>
+                                                    </div><!-- End Form-Group -->
+                                                </div><!-- End col -->
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="address">
+                                                            <i class="fa fa-minus"></i>
+                                                             المحافظه  <span>*</span>
+                                                        </label>
+                                                        <input type="text" id="government" name="government" class="form-control" required [(ngModel)]="newPatient.goverment">
+                                                    </div><!-- End Form-Group -->
+                                                </div><!-- End col -->
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="address">
+                                                            <i class="fa fa-minus"></i>
+                                                             المركز  <span>*</span>
+                                                        </label>
+                                                        <input type="text" id="center" name = "center" class="form-control" required [(ngModel)]="newPatient.center">
+                                                    </div><!-- End Form-Group -->
+                                                </div><!-- End col -->
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="address">
+                                                            <i class="fa fa-minus"></i>
+                                                             المدينه  <span>*</span>
+                                                        </label>
+                                                        <input type="text" id="city" name = "city" class="form-control" required [(ngModel)]="newPatient.city">
+                                                    </div><!-- End Form-Group -->
+                                                </div><!-- End col -->
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <input type="file" class="form-control upload" id="uploadImage" name="uploadImage" (change)="uploadImageService.fileChangeEvent($event)" >
+                                                        <div class="chose-file ">
+                                                           <p class="p">قم برفع الصوره الشخصيه  <span style="color: #F00">*</span></p>
+                                                        </div>
+                                                        <div class="file-btn">
+                                                            <button class="custom-btn">
+                                                                <i class="fa fa-paperclip"></i>
+                                                                <span>تحميل ملف</span>
+                                                            </button>
+                                                        </div>
+                                                    </div><!-- End Form-Group -->
+                                                </div><!-- End col -->
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="name">
+                                                            <i class="fa fa-minus"></i>
+                                                            كلمة المرور  <span>*</span>
+                                                        </label>
+                                                        <input type="password" class="form-control" name = "password" id="password" required [(ngModel)] = "newUser.password">
+                                                    </div><!-- End Form-Group -->
+                                                </div><!-- End col -->
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <button class="custom-btn btn-block" (click)="addPatient()" type="submit">
+                                                            تسجيل حساب جديد
+                                                        </button>
+                                                    </div><!-- End Form-Group -->
+                                                </div><!-- End col -->
+                                            </div><!-- End row -->
+                                            
+                                        </form><!-- End form -->
+                                    </div>
+                                </div><!-- End col -->
+                            
+                            </div><!-- End row -->
+                            
+                        </div><!-- End container -->
+                    </section><!-- End Section -->
+                </div><!--End page-content-->

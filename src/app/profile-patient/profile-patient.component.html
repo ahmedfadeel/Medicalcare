@@ -1,0 +1,263 @@
+ <div class="page-header">
+                    <div class="container">
+                        <ol class="breadcrumb">
+                            <li><a routerLink="/about-us">اﻟﺮﺋﻴﺴﻴﺔ</a></li>
+                            <li class="active">اﻟﻤﻠﻒ اﻟﺸﺨﺼﻲ </li>
+                        </ol>
+                    </div><!-- End container -->
+                </div>
+                <div class="page-content">
+				   <div *ngIf="notfound_Patient" style="color:red;">
+										حدثت مشكله فى السيرفر لا يمكن تحميل معلومات المريض 
+									</div>
+                    <section class="section-lg">
+					   
+                        <div class="container" >
+						   
+                            <div class="row"  *ngIf="!notfound_Patient">
+                                <div class="col-md-6">
+								  
+                                    <div class="white-box person-profile">
+                                        <div class="form-title">
+                                            <h3 class="title">
+                                                اﻟﻤﻌﻠﻮﻣﺎﺕ اﻟﺸﺨﺼﻴﻪ
+                                            </h3>
+                                        </div>
+                                        <p>
+                                            <i class="fa fa-minus"></i>
+                                            <span>:اﻟﻌﻨﻮاﻥ</span>
+                                            {{patient.address}}
+                                        </p>
+                                        <p>
+                                            <i class="fa fa-minus"></i>
+                                            <span>:تاريح الميلاد</span>
+                                             {{patient.birthDate}}   
+                                        </p>
+                                       
+                                        
+										 <a routerLink="/profile-patient-info">
+                                                <button class="custom-btn update-btn btn-block"   >
+                                                    :تعديل الملف الشخصي
+                                                </button>
+                                           </a>
+                                          
+                                    </div>
+                                </div><!-- End col -->
+                                <div class="col-md-6">
+                                    <div class="white-box">
+                                        <div class="reservation-widget">
+                                            <div class="widget-pic">
+                                                <img [src]="'http://localhost:8088/image/profiles/'+patient.id+'.png'" alt="proile-pic">
+                                            </div> <!-- End widget-pic -->
+                                            <div class="widget-contant">
+                                                <h3 class="title-lg">{{patient.name}}  </h3>
+                                               
+                                            </div> <!-- End Widget-contant -->
+                                        </div> <!-- End reservation-widget -->
+                                    </div> <!-- End white-box -->
+                                    <div class="white-box" [hidden]="!logged_inDoctor">
+                                        <a [routerLink]="['/add-diognesis']"
+		                                    [queryParams]="{patientID:'patient.id' }" class="custom-btn">اﺿﺎﻓﻪ ﺗﺸﺨﻴﺺ</a>
+                                        <a href="#" class="custom-btn white-btn" data-toggle="modal" data-target="#addoperation">اﺿﺎﻓﻪ ﻋﻤﻠﻴﺔ</a>
+                                        <a href="#" class="custom-btn white-btn"  data-toggle="modal" data-target="#addanalysis">اﺿﺎﻓﻪ ﺗﺤﻠﻴﻞ</a>
+                                    </div> <!-- End white-box -->
+									</div>
+<!--                                    Model-->
+                                   <div class="modal fade " id="addoperation"  role="dialog">
+                                      <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                          <div class="modal-header">
+                                            <h4>اضف عملية</h4>
+                                          </div>
+                                        
+                                            <form  class="form person-info"  (ngSubmit)="onADD_operation()"   >
+                                                <div class="col-md-12">
+                                                                <div class="form-group">
+                                                                    <label for="name">
+                                                                        اسم العمليه
+                                                                    </label>
+                                                                    <input type="text" id="name" class="form-control" [(ngModel)]="operation.name" >
+                                                                </div><!-- End Form-Group -->
+                                                </div><!-- End col -->
+												
+												<div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label for="date">
+                                                                       تاريخ العمليه
+                                                                    </label>
+                                                                    <input type="text" id="date" class="form-control" [(ngModel)]="operation.date" >
+                                                                </div><!-- End Form-Group -->
+                                               </div><!-- End col -->
+											   <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    
+                                                                </div><!-- End Form-Group -->
+                                               </div><!-- End col -->
+											   <div class="form-group">
+                                                    <button class="custom-btn" type="submit">
+                                                        انشر الان
+                                                    </button>
+                                             
+                                          
+                                         
+                                              
+                                               
+                                               
+                                             
+                                          </div>
+										   </form>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <!-- Model -->
+                                     <div class="modal fade " id="addanalysis"  role="dialog">
+                                      <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                          <div class="modal-header">
+                                            <h4>اضف تحليل</h4>
+                                          </div>
+                                         
+                                            <form  class="form person-info"  (ngSubmit)="onADD_analysis()" >
+                                                <div class="col-md-12">
+                                                                <div class="form-group">
+                                                                    <label for="name">
+                                                                        اسم التحليل
+                                                                    </label>
+                                                                    <input type="text" id="name" class="form-control" [(ngModel)]="analysis.name" >
+                                                                </div><!-- End Form-Group -->
+                                                </div><!-- End col -->
+												
+												<div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label for="date">
+                                                                      تاريخ التحليل
+                                                                    </label>
+                                                                    <input type="text" id="date" class="form-control" [(ngModel)]="analysis.date" value="dd/mm/yy">
+                                                                </div><!-- End Form-Group -->
+                                               </div><!-- End col -->
+											   <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <input type="file" class="form-control upload" id="bookImage" (change)="uploadImageService.fileChangeEvent($event)">
+                                                                    <div class="chose-file ">
+                                                                       <p class="p">تحميل صوره التحليل</p>
+                                                                    </div>
+                                                                    
+                                                                </div><!-- End Form-Group -->
+                                                            </div><!-- End col -->
+											    <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    
+                                                                </div><!-- End Form-Group -->
+                                               </div><!-- End col -->
+											   <div class="form-group">
+                                                    <button class="custom-btn" type="submit">
+                                                        انشر الان
+                                                    </button>
+                                              
+                                        </div>
+										</form>
+                                      </div>
+                                    </div>
+                                </div> <!-- End Col -->
+								
+                                <div class="col-md-3">
+                                        <ul class="nav nav-tabs" role="tablist">
+                                            <li role="presentation" class="active">
+                                                <a href="#diognosis" aria-controls="patient" role="tab" data-toggle="tab">
+                                                    <i class="fa fa-book"></i>
+                                                    اﻟﺘﺸﺨﻴﺺ  
+                                                </a>
+                                            </li>
+                                            <li role="presentation">
+                                                <a href="#operation " aria-controls="doctor" role="tab" data-toggle="tab">
+                                                    <i class="fa fa-heartbeat"></i>
+                                                      العمليات
+                                                </a>
+                                            </li>
+                                           <li role="presentation">
+                                                <a href="#analysties " aria-controls="doctor" role="tab" data-toggle="tab">
+                                                    <i class="fa fa-sticky-note-o"></i>
+                                                     التحاليل 
+                                                </a>
+                                            </li>
+                                          </ul>
+                                        </div><!-- End col -->
+                                          <!-- Tab panes -->
+                                <div class="col-md-7">
+                                        <div class="tab-content">
+                                            <div role="tabpanel" class="tab-pane active" id="diognosis" >
+                                                <div class="white-box">
+                                                    <div class="scrollbar" *ngFor = "let diognes of patient_diognes_List">
+                                                        <div class="conc">
+                                                            <h4> :اسم الدكتور :{{diognes.doctor.name}}</h4>
+                                           
+															<p><span>:التاريخ</span>{{diognes.date}} </p>
+                                                            <p><span>:اﻟﻨﺘﻴﺠﻪ</span> {{diognes.conclusion}}</p>
+                                                            
+                                                        </div> <!-- End conc -->
+                                                        
+                                                    </div> <!-- End scrollbar -->
+                                                </div>  <!-- End White-box -->
+                                            </div>
+                                            <div role="tabpanel" class="tab-pane" id="operation">
+                                                <div class="white-box">
+                                                    <div class="scrollbar" *ngFor = "let opertion of patient_Operation_List">
+                                                        <div class="conc">
+                                                            <h4>:اسم العمليه {{opertion.name}}</h4>
+															<h5>:اسم الدكتور {{opertion.doctor.name}}</h5>
+                                                            <p><span>التاريخ</span> {{opertion.date}}</p>
+                                                            
+                                                        </div> <!-- End conc -->
+                                                        
+                                                    </div> <!-- End scrollbar -->
+                                                </div>  <!-- End White-box -->
+                                            </div>
+                                            <div role="tabpanel" class="tab-pane" id="analysties">
+                                                <div class="white-box">
+                                                    <div class="scrollbar" *ngFor = "let analysis of patient_Analysis_List">
+                                                        <div class="conc">
+                                                            <h4> اسم التحليل:{{analysis.name}}</h4>                         
+                                                            <p><span>اﻟﺪﻛﺘﻮﺭ</span>{{analysis.doctor.name}} </p>
+															<p><span>التاريخ</span>{{analysis.date}} </p>
+                                                            <a  href="#">عرض صوره التحليل</a>
+                                                        </div> <!-- End conc -->
+                                                       
+                                                    </div> <!-- End scrollbar -->
+                                                </div>  <!-- End White-box -->
+                                            </div>
+                                        </div>
+                                    </div><!-- End col --> 
+                                <div class="col-md-3">
+                                    <div class="scrollbar">
+                                        <ul class="nav nav-tabs" role="tablist" *ngFor = "let disease of patient_disease_List">>
+                                            <li role="presentation" class="active">
+                                                <a [href]=" '#' + disease.name" aria-controls="patient" role="tab" data-toggle="tab">
+                                                    <i class="fa fa-heartbeat"> {{disease.name}}</i>
+                                                    
+                                                </a>
+                                            </li>
+                                           
+                                          </ul>
+                                    </div> <!-- End scrollbar -->   
+                                </div><!-- End col -->
+                                <div class="col-md-7">
+                                    <div class="tab-content" *ngFor = "let disease of patient_disease_List" >
+                                        <div role="tabpanel" class="tab-pane active" id={{disease.name}}>
+                                            <div class="white-box"    >
+                                                <div class="conc">
+												
+                                                    <p><span>معلومات عن المرض:</span> {{disease.name}}</p>
+													<p><span>اسم الدكتور المعالج:</span> {{disease.doctor.name}}</p>
+                                                    <p><span>نوع المرض</span> {{disease.tybe}} </p>
+													<p><span>معلومات عن المرض</span> {{disease.info}} </p>
+                                                    
+                                                </div> <!-- End conc -->
+                                            </div>  <!-- End White-box -->
+                                        </div> <!-- End tab-pane -->
+                                        
+                                    </div> <!-- End tab-content -->
+                                </div><!-- End col -->
+                            </div><!-- End row -->
+                        </div><!-- End container -->
+                    </section><!-- End Section -->
+                </div><!--End page-content-->

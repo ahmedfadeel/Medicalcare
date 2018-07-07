@@ -1,0 +1,1354 @@
+<div class="page-header">
+    <div class="container">
+        <ol class="breadcrumb">
+            <li>
+                <a href="#">الرئيسية</a>
+            </li>
+            <li class="active">اضافه التشخيص </li>
+        </ol>
+    </div>
+    <!-- End container -->
+</div>
+<div class="page-content">
+    <div class="add-dig">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="white-box">
+                        <div class="alert alert-success" *ngIf="diognesAdded">تمت عمليه الحفظ بنجاح</div>
+                    <form>
+
+                        <div class="scrollbar height">
+                            <div class="content">
+                                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" role="tab" id="headingfifteen">
+                                            <h4 class="panel-title">
+                                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapsefifteen" aria-expanded="true" aria-controls="collapsefifteen">
+                                                    General Examination
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapsefifteen" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingfifteen">
+                                            <div class="panel-body">
+                                                <div class="row">
+                                                    <div class="col-sm-4 col-xs-6">
+                                                        <div class="form-group">
+                                                            <label>
+                                                                <i class="fa fa-minus"></i>
+                                                                Pressure
+                                                                <span>*</span>
+                                                            </label>
+                                                            <input type="text" class="form-control" name="preature" id="preature" [(ngModel)]="diognes.preature">
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-sm-4 col-xs-6">
+                                                        <div class="form-group">
+                                                            <label>
+                                                                <i class="fa fa-minus"></i>
+                                                                Pulse
+                                                                <span>*</span>
+                                                            </label>
+                                                            <input type="text" class="form-control" name="pulse" id="pulse" [(ngModel)]="diognes.pulse">
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-sm-4 col-xs-6">
+                                                        <div class="form-group">
+                                                            <label>
+                                                                <i class="fa fa-minus"></i>
+                                                                Temprature
+                                                                <span>*</span>
+                                                            </label>
+                                                            <input type="text" class="form-control" name="temperature" id="temperature" [(ngModel)]="diognes.temperature">
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-sm-4 col-xs-6">
+                                                        <div class="form-group">
+                                                            <label>
+                                                                <i class="fa fa-minus"></i>
+                                                                BMI
+                                                                <span>*</span>
+                                                            </label>
+                                                            <input type="text" class="form-control" name="bMI" id="bMI" [(ngModel)]="diognes.bMI">
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-sm-4 col-xs-6">
+                                                        <div class="form-group">
+                                                            <label>
+                                                                <i class="fa fa-minus"></i>
+                                                                General Apperance
+                                                                <span>*</span>
+                                                            </label>
+                                                            <input type="text" class="form-control" name="gemeralApperance" id="gemeralApperance" [(ngModel)]="diognes.gemeralApperance">
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-sm-4 col-xs-6">
+                                                        <div class="form-group">
+                                                            <label>
+                                                                <i class="fa fa-minus"></i>
+                                                                Facial Expressions
+                                                                <span>*</span>
+                                                            </label>
+                                                            <input type="text" class="form-control" name="facialExpression" id="facialExpression" [(ngModel)]="diognes.facialExpression">
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-sm-4 col-xs-6">
+                                                        <div class="form-group">
+                                                            <label>
+                                                                <i class="fa fa-minus"></i>
+                                                                Pain Assessment
+                                                                <span>*</span>
+                                                            </label>
+                                                            <input type="text" class="form-control" name="painAssessment" id="painAssessment" [(ngModel)]="diognes.painAssessment">
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End panel-default -->
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" role="tab" id="headingOne">
+                                            <h4 class="panel-title">
+                                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                    Skin &amp; Complexion
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                            <div class="panel-body">
+                                                <div class="row">
+                                                    <div class="col-md-3 col-sm-4 col-xs-6">
+                                                        <div class="form-group">
+                                                            <div class="radio-check-item">
+                                                                <input type="checkbox" id="pallor" name="pallor" [(ngModel)]="diognes.pallor">
+                                                                <label for="pallor">
+                                                                    pallor
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-md-3 col-sm-4 col-xs-6">
+                                                        <div class="form-group">
+                                                            <div class="radio-check-item">
+                                                                <input type="checkbox" id="Cyanosis" name="Cyanosis" [(ngModel)]="diognes.cyanosis">
+                                                                <label for="Cyanosis">
+                                                                    Cyanosis
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-md-3 col-sm-4 col-xs-6">
+                                                        <div class="form-group">
+                                                            <div class="radio-check-item">
+                                                                <input type="checkbox" id="Jaunadice" name="Jaunadice" [(ngModel)]="diognes.jaundice">
+                                                                <label for="Jaunadice">
+                                                                    Jaunadice
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-md-3 col-sm-4 col-xs-6">
+                                                        <div class="form-group">
+                                                            <div class="radio-check-item">
+                                                                <input type="checkbox" id="hair-distribute" name="hair-distribute" [(ngModel)]="diognes.hairDistibution">
+                                                                <label for="hair-distribute">
+                                                                    Hair distribute
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-md-3 col-sm-4 col-xs-6">
+                                                        <div class="form-group">
+                                                            <div class="radio-check-item">
+                                                                <input type="checkbox" id="unexplainedBurn" name="unexplainedBurn" [(ngModel)]="diognes.unexplainedBurn">
+                                                                <label for="unexplainedBurn">
+                                                                    unexplained burn
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-md-3 col-sm-4 col-xs-6">
+                                                        <div class="form-group">
+                                                            <div class="radio-check-item">
+                                                                <input type="checkbox" id="unexpectedBruise" name="unexpectedBruise" [(ngModel)]="diognes.unexpectedBruise">
+                                                                <label for="unexpectedBruise">
+                                                                    unexplained bruise
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End panel-default -->
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" role="tab" id="headingOne">
+                                            <h4 class="panel-title">
+                                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                                    Head &amp; Neck
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                            <div class="panel-body">
+                                                <div class="row">
+                                                    <div class="col-md-3 col-sm-4 col-xs-6">
+                                                        <div class="form-group">
+                                                            <div class="radio-check-item">
+                                                                <input type="checkbox" id="Scars" name="Scars" [(ngModel)]="diognes.Scars">
+                                                                <label for="Scars">
+                                                                    Scars
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-md-3 col-sm-4 col-xs-6">
+                                                        <div class="form-group">
+                                                            <div class="radio-check-item">
+                                                                <input type="checkbox" id="Viens" name="veins" [(ngModel)]="diognes.veins">
+                                                                <label for="Viens">
+                                                                    Viens
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-md-3 col-sm-4 col-xs-6">
+                                                        <div class="form-group">
+                                                            <div class="radio-check-item">
+                                                                <input type="checkbox" id="Stiffness" name="stiffness" [(ngModel)]="diognes.stiffness">
+                                                                <label for="Stiffness">
+                                                                    Stiffness
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-md-3 col-sm-4 col-xs-6">
+                                                        <div class="form-group">
+                                                            <div class="radio-check-item">
+                                                                <input type="checkbox" id="Thyroid" name="thyroid" [(ngModel)]="diognes.thyroid">
+                                                                <label for="Thyroid">
+                                                                    Thyroid
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-md-3 col-sm-4 col-xs-6">
+                                                        <div class="form-group">
+                                                            <div class="radio-check-item">
+                                                                <input type="checkbox" id="L.nodes" name="lNodes" [(ngModel)]="diognes.lNodes">
+                                                                <label for="L.nodes">
+                                                                    L.nodes
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-sm-4 col-xs-6">
+                                                        <div class="form-group">
+                                                            <label>
+                                                                <i class="fa fa-minus"></i>
+                                                                Sutures
+                                                                <span>*</span>
+                                                            </label>
+                                                            <input type="text" class="form-control" name="headSutures" required [(ngModel)]="diognes.headSutures">
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-sm-4 col-xs-6">
+                                                        <div class="form-group">
+                                                            <label>
+                                                                <i class="fa fa-minus"></i>
+                                                                Fontanels
+                                                                <span>*</span>
+                                                            </label>
+                                                            <input type="text" class="form-control" name="headFontanels" required [(ngModel)]="diognes.headFontanels">
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-sm-4 col-xs-6">
+                                                        <div class="form-group">
+                                                            <label>
+                                                                <i class="fa fa-minus"></i>
+                                                                Other
+                                                                <span>*</span>
+                                                            </label>
+                                                            <input type="text" class="form-control" name="headNeckOthers" required [(ngModel)]="diognes.headNeckOthers">
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End panel-default -->
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" role="tab" id="headingThree">
+                                            <h4 class="panel-title">
+                                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                                                    Chest
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                                            <div class="panel-body">
+                                                <div class="row">
+                                                    <div class="col-md-3 col-sm-4 col-xs-6">
+                                                        <div class="form-group">
+                                                            <div class="radio-check-item">
+                                                                <input type="checkbox" id="expanison" name="expansion" [(ngModel)]="diognes.expansion">
+                                                                <label for="expanison">
+                                                                    expansion
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-md-3 col-sm-4 col-xs-6">
+                                                        <div class="form-group">
+                                                            <div class="radio-check-item">
+                                                                <input type="checkbox" id="breathing.sound" name="breathingSounds" [(ngModel)]="diognes.breathingSounds">
+                                                                <label for="breathing.sound">
+                                                                    breathing.sound
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-md-3 col-sm-4 col-xs-6">
+                                                        <div class="form-group">
+                                                            <div class="radio-check-item">
+                                                                <input type="checkbox" id="adv.sound.yes" name="advSounds" [(ngModel)]="diognes.advSounds">
+                                                                <label for="adv.sound.yes">
+                                                                    adv.sound
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+
+                                                    <div class="col-md-3 col-sm-4 col-xs-6">
+                                                        <div class="form-group">
+                                                            <div class="radio-check-item">
+                                                                <input type="checkbox" id="breast:mass" name="breast" [(ngModel)]="diognes.breast">
+                                                                <label for="breast:mass">
+                                                                    breast:mass
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-md-3 col-sm-4 col-xs-6">
+                                                        <div class="form-group">
+                                                            <div class="radio-check-item">
+                                                                <input type="checkbox" id="nipple" name="nippleDisgarge" [(ngModel)]="diognes.nippleDisgarge">
+                                                                <label for="nipple">
+                                                                    nipple discharge
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+
+                                                    <div class="col-sm-4 col-xs-6">
+                                                        <div class="form-group">
+                                                            <label>
+                                                                <i class="fa fa-minus"></i>
+                                                                comments
+                                                                <span>*</span>
+                                                            </label>
+                                                            <input type="text" class="form-control" name="chestComments" required [(ngModel)]="diognes.chestComments">
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End panel-default -->
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" role="tab" id="headingFour">
+                                            <h4 class="panel-title">
+                                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                                                    Heart
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                                            <div class="panel-body">
+                                                <div class="row">
+
+                                                    <div class="col-sm-4 col-xs-6">
+                                                        <div class="form-group">
+                                                            <label>
+                                                                <i class="fa fa-minus"></i>
+                                                                heart_sounds
+                                                                <span>*</span>
+                                                            </label>
+                                                            <input type="text" class="form-control" id="heartSounds" name="heartSounds" [(ngModel)]="diognes.heartSounds">
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-sm-4 col-xs-6">
+                                                        <div class="form-group">
+                                                            <label>
+                                                                <i class="fa fa-minus"></i>
+                                                                mumurs
+                                                                <span>*</span>
+                                                            </label>
+                                                            <input type="text" class="form-control" id="murmurs" name="murmurs" [(ngModel)]="diognes.murmurs">
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-sm-4 col-xs-6">
+                                                        <div class="form-group">
+                                                            <label>
+                                                                <i class="fa fa-minus"></i>
+                                                                Other
+                                                                <span>*</span>
+                                                            </label>
+                                                            <input type="text" class="form-control" id="heartOthers" name="heartOthers" [(ngModel)]="diognes.heartOthers">
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End panel-default -->
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" role="tab" id="headingFive">
+                                            <h4 class="panel-title">
+                                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                                                    Abdomen
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+                                            <div class="panel-body">
+                                                <div class="row">
+                                                    <div class="col-md-3 col-sm-4 col-xs-6">
+                                                        <div class="form-group">
+                                                            <div class="radio-check-item">
+                                                                <input type="checkbox" id="Ascites:yes" name="ascites" [(ngModel)]="diognes.ascites">
+                                                                <label for="Ascites:yes">
+                                                                    Ascites
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+
+                                                    <div class="col-md-3 col-sm-4 col-xs-6">
+                                                        <div class="form-group">
+                                                            <div class="radio-check-item">
+                                                                <input type="checkbox" id="Masses:Yes" name="masses" [(ngModel)]="diognes.masses">
+                                                                <label for="Masses:Yes">
+                                                                    Masses:Yes
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+
+
+                                                    <div class="col-sm-4 col-xs-6">
+                                                        <div class="form-group">
+                                                            <label>
+                                                                <i class="fa fa-minus"></i>
+                                                                Livers
+                                                                <span>*</span>
+                                                            </label>
+                                                            <input type="text" class="form-control" id="liver" name="liver" [(ngModel)]="diognes.liver">
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-sm-4 col-xs-6">
+                                                        <div class="form-group">
+                                                            <label>
+                                                                <i class="fa fa-minus"></i>
+                                                                Kidneys
+                                                                <span>*</span>
+                                                            </label>
+                                                            <input type="text" class="form-control" id="kidneys" name="kidneys" [(ngModel)]="diognes.kidneys">
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-sm-4 col-xs-6">
+                                                        <div class="form-group">
+                                                            <label>
+                                                                <i class="fa fa-minus"></i>
+                                                                Spleen
+                                                                <span>*</span>
+                                                            </label>
+                                                            <input type="text" class="form-control" id="spleen" name="spleen" [(ngModel)]="diognes.spleen">
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-sm-4 col-xs-6">
+                                                        <div class="form-group">
+                                                            <label>
+                                                                <i class="fa fa-minus"></i>
+                                                                Other
+                                                                <span>*</span>
+                                                            </label>
+                                                            <input type="text" class="form-control" id="abdomenOthers" name="abdomenOthers" [(ngModel)]="diognes.abdomenOthers">
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-sm-4 col-xs-6">
+                                                        <div class="form-group">
+                                                            <label>
+                                                                <i class="fa fa-minus"></i>
+                                                                Ext.Genetalia
+                                                                <span>*</span>
+                                                            </label>
+                                                            <input type="text" class="form-control" id="extGenetalia" name="extGenetalia" [(ngModel)]="diognes.extGenetalia">
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End panel-default -->
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" role="tab" id="headingSix">
+                                            <h4 class="panel-title">
+                                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
+                                                    Upper Limbs
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
+                                            <div class="panel-body">
+                                                <div class="row">
+                                                    <div class="col-md-3 col-sm-4 col-xs-6">
+                                                        <div class="form-group">
+                                                            <div class="radio-check-item">
+                                                                <input type="checkbox" id="Tremors" name="upperLimdstremors" [(ngModel)]="diognes.upperLimdstremors">
+                                                                <label for="Tremors">
+                                                                    Tremors
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-md-3 col-sm-4 col-xs-6">
+                                                        <div class="form-group">
+                                                            <div class="radio-check-item">
+                                                                <input type="checkbox" id="Clubbing" name="upperLimdsclubbing" [(ngModel)]="diognes.upperLimdsclubbing">
+                                                                <label for="Clubbing">
+                                                                    Clubbing
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+
+                                                    <div class="col-sm-4 col-xs-6">
+                                                        <div class="form-group">
+                                                            <label>
+                                                                <i class="fa fa-minus"></i>
+                                                                Joints
+                                                                <span>*</span>
+                                                            </label>
+                                                            <input type="text" class="form-control" id="upperLimdsjoints" name="upperLimdsjoints" [(ngModel)]="diognes.upperLimdsjoints">
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+
+                                                    <div class="col-sm-4 col-xs-6">
+                                                        <div class="form-group">
+                                                            <label>
+                                                                <i class="fa fa-minus"></i>
+                                                                Others
+                                                                <span>*</span>
+                                                            </label>
+                                                            <input type="text" class="form-control" id="upperLimdsOthers" name="upperLimdsOthers" [(ngModel)]="diognes.upperLimdsOthers">
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End panel-default -->
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" role="tab" id="headingSeven">
+                                            <h4 class="panel-title">
+                                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven">
+                                                    Lower Limbs
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapseSeven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeven">
+                                            <div class="panel-body">
+                                                <div class="row">
+                                                    <div class="col-md-3 col-sm-4 col-xs-6">
+                                                        <div class="form-group">
+                                                            <div class="radio-check-item">
+                                                                <input type="checkbox" id="Odema" name="lowerLimbsOdema" [(ngModel)]="diognes.lowerLimbsOdema">
+                                                                <label for="Odema">
+                                                                    Odema
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-md-3 col-sm-4 col-xs-6">
+                                                        <div class="form-group">
+                                                            <div class="radio-check-item">
+                                                                <input type="checkbox" id="clubbing" name="lowerLimdsclubbing" [(ngModel)]="diognes.lowerLimdsclubbing">
+                                                                <label for="clubbing">
+                                                                    clubbing
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+
+                                                    <div class="col-sm-4 col-xs-6">
+                                                        <div class="form-group">
+                                                            <label>
+                                                                <i class="fa fa-minus"></i>
+                                                                Joints
+                                                                <span>*</span>
+                                                            </label>
+                                                            <input type="text" class="form-control" id="lowerLimdsjoints" name="lowerLimdsjoints" [(ngModel)]="diognes.lowerLimdsjoints">
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+
+                                                    <div class="col-sm-4 col-xs-6">
+                                                        <div class="form-group">
+                                                            <label>
+                                                                <i class="fa fa-minus"></i>
+                                                                Others
+                                                                <span>*</span>
+                                                            </label>
+                                                            <input type="text" class="form-control" id="lowerLimdsOthers" name="lowerLimdsOthers" [(ngModel)]="diognes.lowerLimdsOthers">
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End panel-default -->
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" role="tab" id="headingEight">
+                                            <h4 class="panel-title">
+                                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseEight" aria-expanded="true" aria-controls="collapseEight">
+                                                    Disabilites
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapseEight" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEight">
+                                            <div class="panel-body">
+                                                <div class="row">
+                                                    <div class="col-md-3 col-sm-4 col-xs-6">
+                                                        <div class="form-group">
+                                                            <div class="radio-check-item">
+                                                                <input type="checkbox" id="motor" name="disabilitesMotor" [(ngModel)]="diognes.disabilitesMotor">
+                                                                <label for="motor">
+                                                                    motor
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-md-3 col-sm-4 col-xs-6">
+                                                        <div class="form-group">
+                                                            <div class="radio-check-item">
+                                                                <input type="checkbox" id="hearing" name="hearing" [(ngModel)]="diognes.hearing">
+                                                                <label for="hearing">
+                                                                    hearing
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-md-3 col-sm-4 col-xs-6">
+                                                        <div class="form-group">
+                                                            <div class="radio-check-item">
+                                                                <input type="checkbox" id="visual" name="visual" [(ngModel)]="diognes.visual">
+                                                                <label for="visual">
+                                                                    visual
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-md-3 col-sm-4 col-xs-6">
+                                                        <div class="form-group">
+                                                            <div class="radio-check-item">
+                                                                <input type="checkbox" id="mental" name="mental" [(ngModel)]="diognes.mental">
+                                                                <label for="mental">
+                                                                    mental
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-md-3 col-sm-4 col-xs-6">
+                                                        <div class="form-group">
+                                                            <div class="radio-check-item">
+                                                                <input type="checkbox" id="psychic" name="psychic" [(ngModel)]="diognes.psychic">
+                                                                <label for="psychic">
+                                                                    psychic
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-md-3 col-sm-4 col-xs-6">
+                                                        <div class="form-group">
+                                                            <div class="radio-check-item">
+                                                                <input type="checkbox" id="Autism" name="autism" [(ngModel)]="diognes.autism">
+                                                                <label for="Autism">
+                                                                    Autism
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-md-3 col-sm-4 col-xs-6">
+                                                        <div class="form-group">
+                                                            <div class="radio-check-item">
+                                                                <input type="checkbox" id="Learinig_disabilites" name="learningDisabilities" [(ngModel)]="diognes.learningDisabilities">
+                                                                <label for="Learinig_disabilites">
+                                                                    Learinig_disabilites
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-sm-4 col-xs-6">
+                                                        <div class="form-group">
+                                                            <label>
+                                                                <i class="fa fa-minus"></i>
+                                                                Possible cause
+                                                                <span>*</span>
+                                                            </label>
+                                                            <input type="text" class="form-control" id="possibleCause" name="possibleCause" [(ngModel)]="diognes.possibleCause">
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End panel-default -->
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" role="tab" id="headingNine">
+                                            <h4 class="panel-title">
+                                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseNine" aria-expanded="true" aria-controls="collapseNine">
+                                                    Deformities
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapseNine" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingNine">
+                                            <div class="panel-body">
+                                                <div class="row">
+
+                                                    <div class="col-sm-12">
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control" id="Deformities" name="Deformities" [(ngModel)]="diognes.deformities">
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End panel-default -->
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" role="tab" id="headingTen">
+                                            <h4 class="panel-title">
+                                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTen" aria-expanded="true" aria-controls="collapseTen">
+                                                    Neurological
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapseTen" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTen">
+                                            <div class="panel-body">
+                                                <div class="row">
+
+                                                    <div class="col-sm-4 col-xs-6">
+                                                        <div class="form-group">
+                                                            <label>
+                                                                <i class="fa fa-minus"></i>
+                                                                Motor
+                                                                <span>*</span>
+                                                            </label>
+                                                            <input type="text" class="form-control" id="neurologicalMotor" name="neurologicalMotor" [(ngModel)]="diognes.neurologicalMotor">
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-sm-4 col-xs-6">
+                                                        <div class="form-group">
+                                                            <label>
+                                                                <i class="fa fa-minus"></i>
+                                                                Sensory
+                                                                <span>*</span>
+                                                            </label>
+                                                            <input type="text" class="form-control" id="neurologicalSensory" name="neurologicalSensory" [(ngModel)]="diognes.neurologicalSensory">
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-sm-4 col-xs-6">
+                                                        <div class="form-group">
+                                                            <label>
+                                                                <i class="fa fa-minus"></i>
+                                                                Others
+                                                                <span>*</span>
+                                                            </label>
+                                                            <input type="text" class="form-control" id="neurologicalOthers" name="neurologicalOthers" [(ngModel)]="diognes.neurologicalOthers">
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End panel-default -->
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" role="tab" id="headingeleven">
+                                            <h4 class="panel-title">
+                                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseeleven" aria-expanded="true" aria-controls="collapseeleven">
+                                                    Eyes
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapseeleven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingeleven">
+                                            <div class="panel-body">
+                                                <div class="row">
+
+                                                    <div class="col-sm-4 col-xs-6">
+                                                        <div class="form-group">
+                                                            <label>
+                                                                <i class="fa fa-minus"></i>
+                                                                visual Acuity
+                                                                <span>*</span>
+                                                            </label>
+                                                            
+                                                            <input type="checkbox" id="eyesAcuityTL" name="eyesAcuityTL" [(ngModel)]="diognes.eyesAcuityTL">
+                                                            <label for="eyesAcuityTL">
+                                                                <i class="fa fa-minus"></i>
+                                                                Top Left
+                                                                <span>*</span>
+                                                            </label>
+                                                            
+                                                            <input type="checkbox" id="eyesAcuityTR" name="eyesAcuityTR" [(ngModel)]="diognes.eyesAcuityTR">
+                                                            <label for="eyesAcuityTR">
+                                                                <i class="fa fa-minus"></i>
+                                                                Top Right
+                                                                <span>*</span>
+                                                            </label>
+                                                            <input type="checkbox" id="eyesAcuityBR" name="eyesAcuityBR" [(ngModel)]="diognes.eyesAcuityBR">
+                                                            <label for="eyesAcuityBR">
+                                                                <i class="fa fa-minus"></i>
+                                                                Bottom Left
+                                                                <span>*</span>
+                                                            </label>
+                                                            <input type="checkbox" id="eyesAcuityBL" name="eyesAcuityBL" [(ngModel)]="diognes.eyesAcuityBL">
+                                                            <label for="eyesAcuityBL">
+                                                                <i class="fa fa-minus"></i>
+                                                                Bottom Right
+                                                                <span>*</span>
+                                                            </label>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-sm-4 col-xs-6">
+                                                        <div class="form-group">
+                                                            <label>
+                                                                <i class="fa fa-minus"></i>
+                                                                Movement
+                                                                <span>*</span>
+                                                            </label>
+                                                            
+                                                            <input type="checkbox" id="eyesMovementL" name="eyesMovementL" [(ngModel)]="diognes.eyesMovementL">
+                                                            <label for="eyesMovementL">
+                                                                <i class="fa fa-minus"></i>
+                                                                Left
+                                                                <span>*</span>
+                                                            </label>
+                                                            
+                                                            <input type="checkbox" id="eyesMovementR" name="eyesMovementR" [(ngModel)]="diognes.eyesMovementR">
+                                                            <label for="eyesMovementR">
+                                                                <i class="fa fa-minus"></i>
+                                                                Right
+                                                                <span>*</span>
+                                                            </label>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-sm-4 col-xs-6">
+                                                        <div class="form-group">
+                                                            <label>
+                                                                <i class="fa fa-minus"></i>
+                                                                Cornea
+                                                                <span>*</span>
+                                                            </label>
+                                                            
+                                                            <input type="checkbox" id="eyesCorneaL" name="eyesCorneaL" [(ngModel)]="diognes.eyesCorneaL">
+                                                            <label for="eyesCorneaL">
+                                                                <i class="fa fa-minus"></i>
+                                                                Left
+                                                                <span>*</span>
+                                                            </label>
+                                                            
+                                                            <input type="checkbox" id="eyesCorneaR" name="eyesCorneaR" [(ngModel)]="diognes.eyesCorneaR">
+                                                            <label for="eyesCorneaR">
+                                                                <i class="fa fa-minus"></i>
+                                                                Right
+                                                                <span>*</span>
+                                                            </label>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-sm-4 col-xs-6">
+                                                        <div class="form-group">
+                                                            <label>
+                                                                <i class="fa fa-minus"></i>
+                                                                Pupil
+                                                                <span>*</span>
+                                                            </label>
+                                                            
+                                                            <input type="checkbox" id="eyesPupilL" name="eyesPupilL" [(ngModel)]="diognes.eyesPupilL">
+                                                            <label for="eyesPupilL">
+                                                                <i class="fa fa-minus"></i>
+                                                                Left
+                                                                <span>*</span>
+                                                            </label>
+                                                            
+                                                            <input type="checkbox" id="eyesPupilR" name="eyesPupilR" [(ngModel)]="diognes.eyesPupilR">
+                                                            <label for="eyesPupilR">
+                                                                <i class="fa fa-minus"></i>
+                                                                Right
+                                                                <span>*</span>
+                                                            </label>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-sm-4 col-xs-6">
+                                                        <div class="form-group">
+                                                            <label>
+                                                                <i class="fa fa-minus"></i>
+                                                                Comments
+                                                                <span>*</span>
+                                                            </label>
+                                                            <input type="text" class="form-control" id="eyesComment" name="eyesComment" [(ngModel)]="diognes.eyesComment">
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End panel-default -->
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" role="tab" id="headingtwilve">
+                                            <h4 class="panel-title">
+                                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapsetwilve" aria-expanded="true" aria-controls="collapsetwilve">
+                                                    ENT
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapsetwilve" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingtwilve">
+                                            <div class="panel-body">
+                                                <div class="row">
+
+
+                                                    <div class="col-sm-4 col-xs-6">
+                                                        <div class="form-group">
+                                                            <label>
+                                                                <i class="fa fa-minus"></i>
+                                                                Hearing
+                                                                <span>*</span>
+                                                            </label>
+                                                            
+                                                            <input type="checkbox" id="hearingL" name="hearingL" [(ngModel)]="diognes.hearingL">
+                                                            <label for="hearingL">
+                                                                <i class="fa fa-minus"></i>
+                                                                Left
+                                                                <span>*</span>
+                                                            </label>
+                                                            
+                                                            <input type="checkbox" id="hearingR" name="hearingR" [(ngModel)]="diognes.hearingR">
+                                                            <label for="hearingR">
+                                                                <i class="fa fa-minus"></i>
+                                                                Right
+                                                                <span>*</span>
+                                                            </label>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-sm-4 col-xs-6">
+                                                        <div class="form-group">
+                                                            <label>
+                                                                <i class="fa fa-minus"></i>
+                                                                Ear discharge
+                                                                <span>*</span>
+                                                            </label>
+                                                            
+                                                            <input type="checkbox" id="earDischargeL" name="earDischargeL" [(ngModel)]="diognes.earDischargeL">
+                                                            <label for="earDischargeL">
+                                                                <i class="fa fa-minus"></i>
+                                                                Left
+                                                                <span>*</span>
+                                                            </label>
+                                                            
+                                                            <input type="checkbox" id="earDischargeR" name="earDischargeR" [(ngModel)]="diognes.earDischargeR">
+                                                            <label for="earDischargeR">
+                                                                <i class="fa fa-minus"></i>
+                                                                Right
+                                                                <span>*</span>
+                                                            </label>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-sm-4 col-xs-6">
+                                                        <div class="form-group">
+                                                            
+
+                                                            <input type="checkbox" id="nose" name="nose" [(ngModel)]="diognes.nose">
+                                                            <label for="nose">
+                                                                <i class="fa fa-minus"></i>
+                                                                Nose
+                                                                <span>*</span>
+                                                            </label>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-sm-4 col-xs-6">
+                                                        <div class="form-group">
+                                                            
+
+                                                            <input type="checkbox" id="throat" name="throat" [(ngModel)]="diognes.throat">
+                                                            <label for="throat">
+                                                                <i class="fa fa-minus"></i>
+                                                                Throat
+                                                                <span>*</span>
+                                                            </label>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-sm-4 col-xs-6">
+                                                        <div class="form-group">
+                                                            <label>
+                                                                <i class="fa fa-minus"></i>
+                                                                Comments
+                                                                <span>*</span>
+                                                            </label>
+                                                            <input type="text" class="form-control" id="comments" name="comments" [(ngModel)]="diognes.comments">
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End panel-default -->
+
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" role="tab" id="headingEleven">
+                                            <h4 class="panel-title">
+                                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseEleven" aria-expanded="true" aria-controls="collapseEleven">
+                                                    Others
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapseEleven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEleven">
+                                            <div class="panel-body">
+                                                <div class="row">
+                                                    <div class="col-md-4 col-sm-4 col-xs-6">
+                                                        <div class="form-group">
+                                                            <div class="radio-check-item">
+                                                                Functional_and_Rehababilitation_assesment:
+                                                                <input type="checkbox" id="normal" name="functionalRehabilitationAssessment" [(ngModel)]="diognes.functionalRehabilitationAssessmentN">
+                                                                <label for="normal">
+                                                                    normal
+                                                                </label>
+                                                                <input type="checkbox" id="abnormal" name="functionalRehabilitationAssessmenta" [(ngModel)]="diognes.functionalRehabilitationAssessmentAp">
+                                                                <label for="abnormal">
+                                                                    abnormal
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-md-4 col-sm-4 col-xs-6">
+                                                        <div class="form-group">
+                                                            <div class="radio-check-item">
+                                                                Risk for:
+                                                                <input type="checkbox" id="dm" name="riskForDM" [(ngModel)]="diognes.riskForDM">
+                                                                <label for="dm">
+                                                                    DM
+                                                                </label>
+                                                                <input type="checkbox" id="Hypertension" name="riskForHypertension" [(ngModel)]="diognes.riskForHypertension">
+                                                                <label for="Hypertension">
+                                                                    Hypertension
+                                                                </label>
+                                                                <input type="checkbox" id="zother" name="riskForOthers" [(ngModel)]="diognes.riskForOthers">
+                                                                <label for="zother">
+                                                                    other
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-sm-4 col-xs-6">
+                                                        <div class="form-group">
+                                                            <input type="checkbox" id="nutritionalRiskAssessment" name="nutritionalRiskAssessment" [(ngModel)]="diognes.nutritionalRiskAssessment">
+                                                            <label for="nutritionalRiskAssessment">
+                                                                <i class="fa fa-minus"></i>
+                                                                nutritional_Risk_Assesment:(specify)
+                                                                <span>*</span>
+                                                            </label>
+                                                            <span [hidden]="!diognes.nutritionalRiskAssessment"><input type="text"  class="form-control" id="nutritionalRiskAssessmentComment"
+                                                                name="nutritionalRiskAssessmentComment" [(ngModel)]="diognes.nutritionalRiskAssessmentComment"></span>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-sm-4 col-xs-6">
+                                                        <div class="form-group">
+                                                            <label>
+                                                                <i class="fa fa-minus"></i>
+                                                                Fall_Risk_Assesment: if yes(specify)
+                                                                <span>*</span>
+                                                            </label>
+                                                            <input type="text" class="form-control" name="fallRiskAssessment" [(ngModel)]="diognes.fallRiskAssessment">
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End panel-default -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                </div>
+                            </div>
+                            <!-- End Faqs-content -->
+                        </div>
+                        <!-- End scrollbar -->
+                        <div class="form-group">
+                            <label>اضافه تشخيص</label>
+                            <textarea rows="5" placeholder="اكتب هنا تشخيصك..." name="conclution" id="conclution" [(ngModel)]="diognes.conclusion" class="form-control"></textarea>
+                        </div>
+                        <!-- End Form-Group -->
+                        <div class="row">
+
+                            <div class="col-md-4 col-md-offset-4">
+
+                                <form class="text-center">
+                                    <a data-toggle="modal" data-target="#add-treatment" class="custom-btn">اضافه دواء</a>
+                                    <a data-toggle="modal" data-target="#add-advice" class="custom-btn white-btn">اضافه نصيحة</a>
+                                </form>
+
+                            </div>
+                            <!-- End Col -->
+                            <div class="col-md-4 col-md-offset-10">
+
+                                <button class="custom-btn left-btn" type="submit" (click)="addDiognes()">اضافه تشخيص</button>
+                            </div>
+                            <!-- End Col -->
+                        </div>
+                        <!-- End Row-->
+                    </form>
+                </div>
+                <!-- end White-box -->
+            </div>
+            <!-- End Col -->
+        </div>
+        <!-- End Row -->
+    </div>
+    <!-- End add-dig -->
+</div>
+<!--End page-content-->
+<!-- Modal -->
+<div class="modal fade " id="add-advice" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>اضف نصيحة</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <textarea rows="5" placeholder="اكتب هنا نصيحتك او تقريرك..." id="txt11" name="txt11" [(ngModel)]="medicalAdvice.txt" class="form-control"></textarea>
+                    </div>
+                    <!-- End Form-Group -->
+                </form>
+            </div>
+            <div class="modal-footer">
+                <form>
+                    <div class="form-group">
+                        <button class="custom-btn" type="submit" (click)="addAdvice()">
+                            انشر الان
+                        </button>
+                    </div>
+                    <!--End Form-group-->
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade " id="add-treatment" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>اضف الدواء</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="name">
+                            <i class="fa fa-minus"></i>
+                            اسم الدواء
+                            <span>*</span>
+                        </label>
+                        <input type="text" id="name" class="form-control" required name="name" [(ngModel)]="treatment.name">
+                    </div>
+                    <!-- End Form-Group -->
+                    <div class="form-group">
+                        <label for="num">
+                            <i class="fa fa-minus"></i>
+                            الجرعه
+                            <span>*</span>
+                        </label>
+                        <input type="text" id="num" class="form-control" required name="dose" [(ngModel)]="treatment.dose">
+                    </div>
+                    <!-- End Form-Group -->
+                </form>
+            </div>
+            <div class="modal-footer">
+                <form>
+                    <div class="form-group">
+                        <button class="custom-btn" type="submit" (click)="addTreatment()">
+                            انشر الان
+                        </button>
+                    </div>
+                    <!--End Form-group-->
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

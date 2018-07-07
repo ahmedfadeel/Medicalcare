@@ -1,0 +1,1205 @@
+<div class="page-header">
+    <div class="container">
+        <ol class="breadcrumb">
+            <li>
+                <a href="#">الرئيسية</a>
+            </li>
+            <li class="active">اضافه التشخيص </li>
+        </ol>
+    </div>
+    <!-- End container -->
+</div>
+<div class="page-content">
+    <div class="add-dig">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="white-box">
+                    <form>
+
+                        <div class="scrollbar height">
+                            <div class="content">
+                                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                                    <div class="panel panel-default" *ngIf="pulse||pressure||temperature||bMI||gemeralApperance||facialExpression||painAssessment">
+                                        <div class="panel-heading" role="tab" id="headingfifteen">
+                                            <h4 class="panel-title">
+                                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapsefifteen" aria-expanded="true" aria-controls="collapsefifteen">
+                                                    General Examination
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapsefifteen" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingfifteen">
+                                            <div class="panel-body">
+                                                <div class="row">
+                                                    <div class="col-sm-4 col-xs-6">
+                                                        <div class="form-group" *ngIf="pressure">
+                                                            <label>
+
+                                                                Pressure :
+                                                                <span>{{diognes.preature}}</span>
+
+                                                            </label>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-sm-4 col-xs-6">
+                                                        <div class="form-group" *ngIf="pulse">
+                                                            <label>
+
+                                                                Pulse :
+                                                                <span>{{diognes.pulse}}</span>
+
+                                                            </label>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-sm-4 col-xs-6">
+                                                        <div class="form-group" *ngIf="temperature">
+                                                            <label>
+
+                                                                Temprature :
+                                                                <span>{{diognes.temperature}}</span>
+
+                                                            </label>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-sm-4 col-xs-6">
+                                                        <div class="form-group" *ngIf="bMI">
+                                                            <label>
+
+                                                                BMI :
+                                                                <span> {{diognes.bMI}}</span>
+
+                                                            </label>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-sm-4 col-xs-6">
+                                                        <div class="form-group" *ngIf="gemeralApperance">
+                                                            <label>
+
+                                                                General Apperance :
+                                                                <span>{{diognes.gemeralApperance}}</span>
+
+                                                            </label>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-sm-4 col-xs-6">
+                                                        <div class="form-group" *ngIf="facialExpression">
+                                                            <label>
+
+                                                                Facial Expressions :
+                                                                <span> {{diognes.facialExpression}}</span>
+
+                                                            </label>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-sm-4 col-xs-6">
+                                                        <div class="form-group" *ngIf="painAssessment">
+                                                            <label>
+
+                                                                Pain Assessment : {{diognes.painAssessment}}
+
+                                                            </label>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End panel-default -->
+                                    <div class="panel panel-default" *ngIf="diognes.pallor||diognes.cyanosis||diognes.jaundice||diognes.hairDistibution||diognes.unexplainedBurn||diognes.unexpectedBruise">
+                                        <div class="panel-heading" role="tab" id="headingOne">
+                                            <h4 class="panel-title">
+                                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                    Skin &amp; Complexion
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                            <div class="panel-body">
+                                                <div class="row">
+                                                    <div class="col-md-3 col-sm-4 col-xs-6">
+                                                        <div class="form-group">
+                                                            <div class="radio-check-item" *ngIf="diognes.pallor">
+                                                                <label for="pallor">
+                                                                    pallor
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-md-3 col-sm-4 col-xs-6">
+                                                        <div class="form-group">
+                                                            <div class="radio-check-item" *ngIf="diognes.cyanosis">
+                                                                <label for="Cyanosis">
+                                                                    Cyanosis
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-md-3 col-sm-4 col-xs-6">
+                                                        <div class="form-group">
+                                                            <div class="radio-check-item" *ngIf="diognes.jaundice">
+                                                                <label for="Jaunadice">
+                                                                    Jaunadice
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-md-3 col-sm-4 col-xs-6">
+                                                        <div class="form-group">
+                                                            <div class="radio-check-item" *ngIf="diognes.hairDistibution">
+                                                                <label for="hair-distribute">
+                                                                    Hair distribute
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-md-3 col-sm-4 col-xs-6">
+                                                        <div class="form-group">
+                                                            <div class="radio-check-item" *ngIf="diognes.unexplainedBurn">
+                                                                <label for="unexplainedBurn">
+                                                                    unexplained burn
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-md-3 col-sm-4 col-xs-6">
+                                                        <div class="form-group">
+                                                            <div class="radio-check-item" *ngIf="diognes.unexpectedBruise">
+                                                                <label for="unexpectedBruise">
+                                                                    unexplained bruise
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End panel-default -->
+                                    <div class="panel panel-default" *ngIf="diognes.Scars||diognes.veins||diognes.stiffness||diognes.thyroid||diognes.lNodes||headSutures||headFontanels||headNeckOthers">
+                                        <div class="panel-heading" role="tab" id="headingOne">
+                                            <h4 class="panel-title">
+                                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                                    Head &amp; Neck
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                            <div class="panel-body">
+                                                <div class="row">
+                                                    <div class="col-md-3 col-sm-4 col-xs-6">
+                                                        <div class="form-group">
+                                                            <div class="radio-check-item" *ngIf="diognes.Scars">
+                                                                <label for="Scars">
+                                                                    Scars
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-md-3 col-sm-4 col-xs-6">
+                                                        <div class="form-group">
+                                                            <div class="radio-check-item" *ngIf="diognes.veins">
+                                                                <label for="Viens">
+                                                                    Viens
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-md-3 col-sm-4 col-xs-6">
+                                                        <div class="form-group">
+                                                            <div class="radio-check-item" *ngIf="diognes.stiffness">
+                                                                <label for="Stiffness">
+                                                                    Stiffness
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-md-3 col-sm-4 col-xs-6">
+                                                        <div class="form-group">
+                                                            <div class="radio-check-item" *ngIf="diognes.thyroid">
+                                                                <label for="Thyroid">
+                                                                    Thyroid
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-md-3 col-sm-4 col-xs-6">
+                                                        <div class="form-group">
+                                                            <div class="radio-check-item" *ngIf="diognes.lNodes">
+                                                                <label for="L.nodes">
+                                                                    L.nodes
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-sm-4 col-xs-6">
+                                                        <div class="form-group" *ngIf="headSutures">
+                                                            <label>
+                                                                Sutures : <span>{{diognes.headSutures}}</span>
+
+                                                            </label>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-sm-4 col-xs-6">
+                                                        <div class="form-group" *ngIf="headFontanels">
+                                                            <label>
+
+                                                                Fontanels : <span>{{diognes.headFontanels}}</span>
+
+                                                            </label>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-sm-4 col-xs-6">
+                                                        <div class="form-group" *ngIf="headNeckOthers">
+                                                            <label>
+
+                                                                Other : <span>{{diognes.headNeckOthers}}</span>
+
+                                                            </label>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End panel-default -->
+                                    <div class="panel panel-default" *ngIf="diognes.expansion||diognes.breathingSounds||diognes.advSounds||diognes.breast||diognes.nippleDisgarge||chestComments">
+                                        <div class="panel-heading" role="tab" id="headingThree">
+                                            <h4 class="panel-title">
+                                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                                                    Chest
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                                            <div class="panel-body">
+                                                <div class="row">
+                                                    <div class="col-md-3 col-sm-4 col-xs-6" *ngIf="diognes.expansion">
+                                                        <div class="form-group">
+                                                            <div class="radio-check-item">
+                                                                <label for="expanison">
+                                                                    expansion
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-md-3 col-sm-4 col-xs-6" *ngIf="diognes.breathingSounds">
+                                                        <div class="form-group">
+                                                            <div class="radio-check-item">
+                                                                <label for="breathing.sound">
+                                                                    breathing.sound
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-md-3 col-sm-4 col-xs-6" *ngIf="diognes.advSounds">
+                                                        <div class="form-group">
+                                                            <div class="radio-check-item">
+                                                                <label for="adv.sound.yes">
+                                                                    adv.sound
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+
+                                                    <div class="col-md-3 col-sm-4 col-xs-6" *ngIf="diognes.breast">
+                                                        <div class="form-group">
+                                                            <div class="radio-check-item">
+                                                                <label for="breast:mass">
+                                                                    breast:mass
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-md-3 col-sm-4 col-xs-6" *ngIf="diognes.nippleDisgarge">
+                                                        <div class="form-group">
+                                                            <div class="radio-check-item">
+                                                                <label for="nipple">
+                                                                    nipple discharge
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+
+                                                    <div class="col-sm-4 col-xs-6" *ngIf="chestComments">
+                                                        <div class="form-group">
+                                                            <label>
+
+                                                                comments : <span>{{diognes.chestComments}}</span>
+
+                                                            </label>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End panel-default -->
+                                    <div class="panel panel-default" *ngIf="heartSounds||murmurs||heartOthers">
+                                        <div class="panel-heading" role="tab" id="headingFour">
+                                            <h4 class="panel-title">
+                                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                                                    Heart
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                                            <div class="panel-body">
+                                                <div class="row">
+
+                                                    <div class="col-sm-4 col-xs-6" *ngIf="heartSounds">
+                                                        <div class="form-group">
+                                                            <label>
+
+                                                                heart_sounds :
+                                                                <span>{{diognes.heartSounds}}</span>
+
+                                                            </label>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-sm-4 col-xs-6" *ngIf="murmurs">
+                                                        <div class="form-group">
+                                                            <label>
+
+                                                                mumurs :
+                                                                <span>{{diognes.murmurs}}</span>
+
+                                                            </label>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-sm-4 col-xs-6" *ngIf="heartOthers">
+                                                        <div class="form-group">
+                                                            <label>
+
+                                                                Other :
+                                                                <span>{{diognes.heartOthers}}</span>
+
+                                                            </label>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End panel-default -->
+                                    <div class="panel panel-default" *ngIf="extGenetalia||diognes.ascites||diognes.masses||liver||kidneys||spleen||abdomenOthers">
+                                        <div class="panel-heading" role="tab" id="headingFive">
+                                            <h4 class="panel-title">
+                                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                                                    Abdomen
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+                                            <div class="panel-body">
+                                                <div class="row">
+                                                    <div class="col-md-3 col-sm-4 col-xs-6" *ngIf="diognes.ascites">
+                                                        <div class="form-group">
+                                                            <div class="radio-check-item">
+                                                                <label for="Ascites:yes">
+                                                                    Ascites
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+
+                                                    <div class="col-md-3 col-sm-4 col-xs-6" *ngIf="diognes.masses">
+                                                        <div class="form-group">
+                                                            <div class="radio-check-item">
+                                                                <label for="Masses:Yes">
+                                                                    Masses:Yes
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+
+
+                                                    <div class="col-sm-4 col-xs-6" *ngIf="liver">
+                                                        <div class="form-group">
+                                                            <label>
+
+                                                                Livers :
+                                                                <span>{{diognes.liver}}</span>
+
+                                                            </label>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-sm-4 col-xs-6" *ngIf="kidneys">
+                                                        <div class="form-group">
+                                                            <label>
+
+                                                                Kidneys :
+                                                                <span>{{diognes.kidneys}}</span>
+
+                                                            </label>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-sm-4 col-xs-6" *ngIf="spleen">
+                                                        <div class="form-group">
+                                                            <label>
+
+                                                                Spleen :
+                                                                <span>{{diognes.spleen}}</span>
+
+                                                            </label>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-sm-4 col-xs-6" *ngIf="abdomenOthers">
+                                                        <div class="form-group">
+                                                            <label>
+
+                                                                Other :
+                                                                <span>{{diognes.abdomenOthers}}</span>
+
+                                                            </label>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-sm-4 col-xs-6" *ngIf="extGenetalia">
+                                                        <div class="form-group">
+                                                            <label>
+
+                                                                Ext.Genetalia :
+                                                                <span>{{diognes.extGenetalia}}</span>
+
+                                                            </label>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End panel-default -->
+                                    <div class="panel panel-default" *ngIf="diognes.upperLimdstremors||diognes.upperLimdsclubbing||upperLimdsjoints||upperLimdsOthers">
+                                        <div class="panel-heading" role="tab" id="headingSix">
+                                            <h4 class="panel-title">
+                                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
+                                                    Upper Limbs
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
+                                            <div class="panel-body">
+                                                <div class="row">
+                                                    <div class="col-md-3 col-sm-4 col-xs-6" *ngIf="diognes.upperLimdstremors">
+                                                        <div class="form-group">
+                                                            <div class="radio-check-item">
+                                                                <label for="Tremors">
+                                                                    Tremors
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-md-3 col-sm-4 col-xs-6" *ngIf="diognes.upperLimdsclubbing">
+                                                        <div class="form-group">
+                                                            <div class="radio-check-item">
+                                                                <label for="Clubbing">
+                                                                    Clubbing
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+
+                                                    <div class="col-sm-4 col-xs-6" *ngIf="upperLimdsjoints">
+                                                        <div class="form-group">
+                                                            <label>
+
+                                                                Joints :
+                                                                <span>{{diognes.upperLimdsjoints}}</span>
+
+                                                            </label>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+
+                                                    <div class="col-sm-4 col-xs-6" *ngIf="upperLimdsOthers">
+                                                        <div class="form-group">
+                                                            <label>
+
+                                                                Others :
+                                                                <span>{{diognes.upperLimdsOthers}}</span>
+
+                                                            </label>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End panel-default -->
+                                    <div class="panel panel-default" *ngIf="diognes.lowerLimbsOdema||diognes.lowerLimdsclubbing||lowerLimdsjoints||lowerLimdsOthers">
+                                        <div class="panel-heading" role="tab" id="headingSeven">
+                                            <h4 class="panel-title">
+                                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven">
+                                                    Lower Limbs
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapseSeven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeven">
+                                            <div class="panel-body">
+                                                <div class="row">
+                                                    <div class="col-md-3 col-sm-4 col-xs-6" *ngIf="diognes.lowerLimbsOdema">
+                                                        <div class="form-group">
+                                                            <div class="radio-check-item">
+                                                                <label for="Odema">
+                                                                    Odema
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-md-3 col-sm-4 col-xs-6" *ngIf="diognes.lowerLimdsclubbing">
+                                                        <div class="form-group">
+                                                            <div class="radio-check-item">
+                                                                <label for="clubbing">
+                                                                    clubbing
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+
+                                                    <div class="col-sm-4 col-xs-6" *ngIf="lowerLimdsjoints">
+                                                        <div class="form-group">
+                                                            <label>
+
+                                                                Joints :
+                                                                <span>{{diognes.lowerLimdsjoints}}</span>
+
+                                                            </label>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+
+                                                    <div class="col-sm-4 col-xs-6" *ngIf="lowerLimdsOthers">
+                                                        <div class="form-group">
+                                                            <label>
+
+                                                                Others :
+                                                                <span>{{diognes.lowerLimdsOthers}}</span>
+
+                                                            </label>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End panel-default -->
+                                    <div class="panel panel-default" *ngIf="diognes.disabilitesMotor||diognes.hearing||diognes.visual||diognes.mental||diognes.psychic||diognes.autism||diognes.learningDisabilities||possibleCause">
+                                        <div class="panel-heading" role="tab" id="headingEight">
+                                            <h4 class="panel-title">
+                                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseEight" aria-expanded="true" aria-controls="collapseEight">
+                                                    Disabilites
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapseEight" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEight">
+                                            <div class="panel-body">
+                                                <div class="row">
+                                                    <div class="col-md-3 col-sm-4 col-xs-6" *ngIf="diognes.disabilitesMotor">
+                                                        <div class="form-group">
+                                                            <div class="radio-check-item">
+                                                                <label for="motor">
+                                                                    motor
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-md-3 col-sm-4 col-xs-6" *ngIf="diognes.hearing">
+                                                        <div class="form-group">
+                                                            <div class="radio-check-item">
+                                                                <label for="hearing">
+                                                                    hearing
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-md-3 col-sm-4 col-xs-6" *ngIf="diognes.visual">
+                                                        <div class="form-group">
+                                                            <div class="radio-check-item">
+                                                                <label for="visual">
+                                                                    visual
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-md-3 col-sm-4 col-xs-6" *ngIf="diognes.mental">
+                                                        <div class="form-group">
+                                                            <div class="radio-check-item">
+                                                                <label for="mental">
+                                                                    mental
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-md-3 col-sm-4 col-xs-6" *ngIf="diognes.psychic">
+                                                        <div class="form-group">
+                                                            <div class="radio-check-item">
+                                                                <label for="psychic">
+                                                                    psychic
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-md-3 col-sm-4 col-xs-6" *ngIf="diognes.autism">
+                                                        <div class="form-group">
+                                                            <div class="radio-check-item">
+                                                                <label for="Autism">
+                                                                    Autism
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-md-3 col-sm-4 col-xs-6" *ngIf="diognes.learningDisabilities">
+                                                        <div class="form-group">
+                                                            <div class="radio-check-item">
+                                                                <label for="Learinig_disabilites">
+                                                                    Learinig_disabilites
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-sm-4 col-xs-6" *ngIf="possibleCause">
+                                                        <div class="form-group">
+                                                            <label>
+
+                                                                Possible cause :
+                                                                <span>{{diognes.possibleCause}}</span>
+
+                                                            </label>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End panel-default -->
+                                    <div class="panel panel-default" *ngIf="deformities">
+                                        <div class="panel-heading" role="tab" id="headingNine">
+                                            <h4 class="panel-title">
+                                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseNine" aria-expanded="true" aria-controls="collapseNine">
+                                                    Deformities
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapseNine" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingNine">
+                                            <div class="panel-body">
+                                                <div class="row">
+
+                                                    <div class="col-sm-12">
+                                                        <div class="form-group">
+                                                            <span>{{diognes.deformities}}</span>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End panel-default -->
+                                    <div class="panel panel-default" *ngIf="neurologicalMotor||neurologicalSensory||neurologicalOthers">
+                                        <div class="panel-heading" role="tab" id="headingTen">
+                                            <h4 class="panel-title">
+                                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTen" aria-expanded="true" aria-controls="collapseTen">
+                                                    Neurological
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapseTen" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTen">
+                                            <div class="panel-body">
+                                                <div class="row">
+
+                                                    <div class="col-sm-4 col-xs-6" *ngIf="neurologicalMotor">
+                                                        <div class="form-group">
+                                                            <label>
+
+                                                                Motor : <span>{{diognes.neurologicalMotor}}</span>
+
+                                                            </label>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-sm-4 col-xs-6" *ngIf="neurologicalSensory">
+                                                        <div class="form-group">
+                                                            <label>
+
+                                                                Sensory : <span>{{diognes.neurologicalSensory}}</span>
+
+                                                            </label>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-sm-4 col-xs-6" *ngIf="neurologicalOthers">
+                                                        <div class="form-group">
+                                                            <label>
+
+                                                                Others : <span>{{diognes.neurologicalOthers}}</span>
+
+                                                            </label>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End panel-default -->
+                                    <div class="panel panel-default" *ngIf="eyesComment||diognes.eyesAcuityTL||diognes.eyesAcuityTR||diognes.eyesAcuityBR||diognes.eyesMovementL||diognes.eyesMovementR||diognes.eyesCorneaL||diognes.eyesCorneaR||diognes.eyesPupilR||diognes.eyesPupilL">
+                                        <div class="panel-heading" role="tab" id="headingeleven">
+                                            <h4 class="panel-title">
+                                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseeleven" aria-expanded="true" aria-controls="collapseeleven">
+                                                    Eyes
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapseeleven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingeleven">
+                                            <div class="panel-body">
+                                                <div class="row">
+
+                                                    <div class="col-sm-4 col-xs-6" *ngIf="diognes.eyesAcuityTL||diognes.eyesAcuityTR||diognes.eyesAcuityBR||diognes.eyesAcuityBL">
+                                                        <div class="form-group">
+                                                            <label>
+
+                                                                visual Acuity
+
+                                                            </label>
+
+                                                            <label for="eyesAcuityTL" *ngIf="diognes.eyesAcuityTL">
+
+                                                                Top Left
+
+                                                            </label>
+
+                                                            <label for="eyesAcuityTR" *ngIf="diognes.eyesAcuityTR">
+
+                                                                Top Right
+
+                                                            </label>
+                                                            <label for="eyesAcuityBR" *ngIf="diognes.eyesAcuityBR">
+
+                                                                Bottom Left
+
+                                                            </label>
+                                                            <label for="eyesAcuityBL" *ngIf="diognes.eyesAcuityBL">
+
+                                                                Bottom Right
+
+                                                            </label>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-sm-4 col-xs-6" *ngIf="diognes.eyesMovementL||diognes.eyesMovementR">
+                                                        <div class="form-group">
+                                                            <label>
+
+                                                                Movement
+
+                                                            </label>
+
+                                                            <label for="eyesMovementL" *ngIf="diognes.eyesMovementL">
+
+                                                                Left
+
+                                                            </label>
+
+                                                            <label for="eyesMovementR" *ngIf="diognes.eyesMovementR">
+
+                                                                Right
+
+                                                            </label>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-sm-4 col-xs-6" *ngIf="diognes.eyesCorneaL||diognes.eyesCorneaR">
+                                                        <div class="form-group">
+                                                            <label>
+
+                                                                Cornea
+
+                                                            </label>
+
+                                                            <label for="eyesCorneaL" *ngIf="diognes.eyesCorneaL">
+
+                                                                Left
+
+                                                            </label>
+
+                                                            <label for="eyesCorneaR" *ngIf="diognes.eyesCorneaR">
+
+                                                                Right
+
+                                                            </label>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-sm-4 col-xs-6" *ngIf="diognes.eyesPupilR||diognes.eyesPupilL">
+                                                        <div class="form-group">
+                                                            <label>
+
+                                                                Pupil
+
+                                                            </label>
+
+                                                            <label for="eyesPupilL" *ngIf="diognes.eyesPupilL">
+
+                                                                Left
+
+                                                            </label>
+
+                                                            <label for="eyesPupilR" *ngIf="diognes.eyesPupilR">
+
+                                                                Right
+
+                                                            </label>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-sm-4 col-xs-6" *ngIf="eyesComment">
+                                                        <div class="form-group">
+                                                            <label>
+
+                                                                Comments : <span>{{diognes.eyesComment}}</span>
+
+                                                            </label>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End panel-default -->
+                                    <div class="panel panel-default" *ngIf="comments||diognes.throat||diognes.nose||diognes.earDischargeL||diognes.earDischargeR||diognes.hearingL||diognes.hearingR">
+                                        <div class="panel-heading" role="tab" id="headingtwilve">
+                                            <h4 class="panel-title">
+                                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapsetwilve" aria-expanded="true" aria-controls="collapsetwilve">
+                                                    ENT
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapsetwilve" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingtwilve">
+                                            <div class="panel-body">
+                                                <div class="row">
+
+
+                                                    <div class="col-sm-4 col-xs-6" *ngIf="diognes.hearingL||diognes.hearingR">
+                                                        <div class="form-group">
+                                                            <label>
+
+                                                                Hearing
+
+                                                            </label>
+
+                                                            <label for="hearingL" *ngIf="diognes.hearingL">
+
+                                                                Left
+
+                                                            </label>
+
+                                                            <label for="hearingR" *ngIf="diognes.hearingR">
+
+                                                                Right
+
+                                                            </label>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-sm-4 col-xs-6" *ngIf="diognes.earDischargeL||diognes.earDischargeR">
+                                                        <div class="form-group">
+                                                            <label>
+
+                                                                Ear discharge
+
+                                                            </label>
+
+                                                            <label for="earDischargeL" *ngIf="diognes.earDischargeL">
+
+                                                                Left
+
+                                                            </label>
+
+                                                            <label for="earDischargeR" *ngIf="diognes.earDischargeR">
+
+                                                                Right
+
+                                                            </label>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-sm-4 col-xs-6" *ngIf="diognes.nose">
+                                                        <div class="form-group">
+
+
+                                                            <label for="nose">
+
+                                                                Nose
+
+                                                            </label>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-sm-4 col-xs-6" *ngIf="diognes.throat">
+                                                        <div class="form-group">
+
+
+                                                            <label for="throat">
+
+                                                                Throat
+
+                                                            </label>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-sm-4 col-xs-6" *ngIf="comments">
+                                                        <div class="form-group">
+                                                            <label>
+
+                                                                Comments : <span>{{diognes.comments}}</span>
+
+                                                            </label>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End panel-default -->
+
+                                    <div class="panel panel-default" *ngIf="fallRiskAssessment||diognes.nutritionalRiskAssessment||diognes.riskForOthers||diognes.riskForDM||diognes.riskForHypertension||diognes.functionalRehabilitationAssessmentN||diognes.functionalRehabilitationAssessmentAp">
+                                        <div class="panel-heading" role="tab" id="headingEleven">
+                                            <h4 class="panel-title">
+                                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseEleven" aria-expanded="true" aria-controls="collapseEleven">
+                                                    Others
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapseEleven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEleven">
+                                            <div class="panel-body">
+                                                <div class="row">
+                                                    <div class="col-md-4 col-sm-4 col-xs-6" *ngIf="diognes.functionalRehabilitationAssessmentN||diognes.functionalRehabilitationAssessmentAp">
+                                                        <div class="form-group">
+                                                            <div class="radio-check-item">
+                                                                Functional_and_Rehababilitation_assesment:
+                                                                <label for="normal" *ngIf="diognes.functionalRehabilitationAssessmentN">
+                                                                    normal
+                                                                </label>
+                                                                <label for="abnormal" *ngIf="diognes.functionalRehabilitationAssessmentAp">
+                                                                    abnormal
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-md-4 col-sm-4 col-xs-6" *ngIf="diognes.riskForOthers||diognes.riskForDM||diognes.riskForHypertension">
+                                                        <div class="form-group">
+                                                            <div class="radio-check-item">
+                                                                Risk for:
+                                                                <label for="dm" *ngIf="diognes.riskForDM">
+                                                                    DM
+                                                                </label>
+                                                                <label for="Hypertension" *ngIf="diognes.riskForHypertension">
+                                                                    Hypertension
+                                                                </label>
+                                                                <label for="zother" *ngIf="diognes.riskForOthers">
+                                                                    other
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-sm-4 col-xs-6" *ngIf="diognes.nutritionalRiskAssessment">
+                                                        <div class="form-group">
+                                                            <input type="checkbox" id="nutritionalRiskAssessment" name="nutritionalRiskAssessment" [(ngModel)]="diognes.nutritionalRiskAssessment">
+                                                            <label for="nutritionalRiskAssessment">
+
+                                                                nutritional_Risk_Assesment:(specify) : <span>{{diognes.nutritionalRiskAssessmentComment}}</span>
+
+                                                            </label>
+                                                            
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+                                                    <div class="col-sm-4 col-xs-6" *ngIf="fallRiskAssessment">
+                                                        <div class="form-group">
+                                                            <label>
+
+                                                                Fall_Risk_Assesment: <span>{{diognes.fallRiskAssessment}}</span>
+
+                                                            </label>
+                                                        </div>
+                                                        <!-- End Form-Group -->
+                                                    </div>
+                                                    <!-- End Col -->
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End panel-default -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                </div>
+                            </div>
+                            <!-- End Faqs-content -->
+                        </div>
+                        <!-- End scrollbar -->
+                        <div class="form-group">
+                            <label>اضافه تشخيص</label>
+                            <textarea rows="5" placeholder="اكتب هنا تشخيصك..." name="conclution" id="conclution" [(ngModel)]="diognes.conclusion" class="form-control"></textarea>
+                        </div>
+                        <!-- End Form-Group -->
+
+                    </form>
+                </div>
+                <!-- end White-box -->
+            </div>
+            <!-- End Col -->
+        </div>
+        <!-- End Row -->
+    </div>
+    <!-- End add-dig -->
+</div>
+<!--End page-content-->
+<!-- Modal -->

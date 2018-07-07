@@ -1,0 +1,205 @@
+  
+                <div class="page-header">
+                    <div class="container">
+                        <ol class="breadcrumb">
+                            <li><a routerLink="/about-us"></a></li>
+                            <li class="active"> ﺗﻌﺪﻳﻞ اﻟﻤﻠﻒ اﻟﺸﺨﺼﻲ</li>
+                        </ol>
+                    </div><!-- End container -->
+                </div>
+                <div class="page-content">
+                    <section class="section-lg">
+                        <div class="container">
+                            <div class="row">
+                                <div class="tabs">
+                                    <div class="col-md-3">
+                                        <ul class="nav nav-tabs" role="tablist">
+                                            <li role="presentation" class="active">
+                                                <a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">
+                                                    <i class="fa fa-user"></i>
+                                                    اﻟﻤﻌﻠﻮﻣﺎﺕ اﻟﺸﺨﺼﻴﺔ
+                                                </a>
+                                            </li>
+                                            <li role="presentation">
+                                                <a href="#contact-info" aria-controls="contact-info" role="tab" data-toggle="tab">
+                                                    <i class="fa fa-envelope"></i>
+                                                     ﻣﻌﻠﻮﻣﺎﺕ اﻟﺘﻮاﺻﻞ
+                                                </a>
+                                            </li>
+                                            <li role="presentation">
+                                                <a href="#password" aria-controls="password" role="tab" data-toggle="tab">
+                                                    <i class="fa fa-lock"></i>
+                                                    ﻛﻠﻤﺔ اﻟﻤﺮﻭﺭ
+                                                </a>
+                                            </li>
+                                          </ul>
+                                        </div><!-- End col -->
+                                          <!-- Tab panes -->
+                                    <div class="col-md-7">
+                                        <div class="tab-content">
+                                            <div role="tabpanel" class="tab-pane active" id="profile">
+                                                <div class="white-box">
+                                                    <div class="form-title">
+                                                        <h3 class="title">
+                                                            اﻟﻤﻌﻠﻮﻣﺎﺕ اﻟﺸﺨﺼﻴﺔ
+                                                        </h3>
+                                                    </div>
+                                                    <form class="form person-info" >
+                                                        <div class="row">
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label for="name">
+                                                                        اﻹﺳﻢ
+                                                                    </label>
+                                                                    <input type="text" id="name" class="form-control" name="name" [(ngModel)]="patient.name"   >
+                                                                </div><!-- End Form-Group -->
+                                                            </div><!-- End col -->
+                                                            
+                                                            <div class="col-md-6">
+                                                              <div class="form-group">
+                                                                    <label for="length">
+                                                                       الطول 
+                                                                    </label>
+                                                                    <input type="text" id="length" name="length" class="form-control" [(ngModel)]="patient.lenth" value="180">
+                                                                </div><!-- End Form-Group   -->
+                                                            </div><!-- End col -->
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label for="weight">
+                                                                        الوزن                                       </label>
+                                                                    <input type="text" id="weight" name="weight" class="form-control" [(ngModel)]="patient.weight" value="90">
+                                                                </div><!-- End Form-Group -->
+                                                            </div><!-- End col -->
+                                                            <div class="col-md-12">
+                                                                <div class="form-group">
+                                                                    <button class="custom-btn btn-block"
+                                                                    type="submit" (click)="update_personal_information()">
+                                                                        ﺣﻔﻆ اﻟﺘﻌﺪﻳﻼﺕ  
+                                                                    </button>
+                                                                </div><!-- End Form-Group -->
+                                                            </div><!-- End col -->
+                                                        </div><!-- End row -->
+                                                    </form><!-- End form -->
+                                                </div>
+                                            </div>
+                                            <div role="tabpanel" class="tab-pane" id="contact-info">
+                                                <div class="white-box">
+                                                    <div class="form-title">
+                                                        <h3 class="title">
+                                                            ﻣﻌﻠﻮﻣﺎﺕ اﻟﺘﻮاﺻﻞ
+                                                        </h3>
+                                                    </div>
+                                                    <form class="form person-info" >
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <div class="form-group">
+                                                                    <label for="email">
+                                                                        اﻟﺒﺮﻳﺪ اﻻﻟﻜﺘﺮﻭﻧﻰ
+                                                                    </label>
+                                                                    <input type="email" id="email" name="email" class="form-control" [(ngModel)]="patient.email" value="abdelhameed@gmail.com" >
+                                                                </div><!-- End Form-Group -->
+                                                            </div><!-- End col -->
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label for="phone">
+                                                                        اﻟﻬﺎﺗﻒ
+                                                                    </label>
+                                                                    <input type="tel" id="phone" name="phone" class="form-control" [(ngModel)]="patient.phone" value="01092144285" >
+                                                                </div><!-- End Form-Group -->
+                                                            </div><!-- End col -->
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label for="address">
+                                                                         المحافظه  <span>*</span>
+                                                                    </label>
+                                                                    <input type="text" id="government" name="government" class="form-control" required [(ngModel)]="patient.goverment">
+                                                                </div><!-- End Form-Group -->
+                                                            </div><!-- End col -->
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label for="address">
+                                                                         المركز  <span>*</span>
+                                                                    </label>
+                                                                    <input type="text" id="center" name = "center" class="form-control" required [(ngModel)]="patient.center">
+                                                                </div><!-- End Form-Group -->
+                                                            </div><!-- End col -->
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label for="address">
+                                                                         المدينه  <span>*</span>
+                                                                    </label>
+                                                                    <input type="text" id="city" name = "city" class="form-control" required [(ngModel)]="patient.city">
+                                                                </div><!-- End Form-Group -->
+                                                            </div><!-- End col -->
+                                                            
+                                                            <div class="col-md-12">
+                                                                <div class="form-group">
+                                                                    <label for="address">
+                                                                      الشارع
+                                                                    </label>
+                                                                    <input type="text" id="address" name="street" class="form-control" [(ngModel)]="patient.street"  value="ﺷﺒﻴﻦ اﻟﻜﻮﻡ" >
+                                                                </div><!-- End Form-Group -->
+                                                            </div><!-- End col -->
+                                                            <div class="col-md-12">
+                                                                <div class="form-group">
+                                                                    <button class="custom-btn btn-block" type="submit" (click)="update_communication_information()">
+                                                                        ﺣﻔﻆ اﻟﺘﻌﺪﻳﻼﺕ  
+                                                                    </button>
+                                                                </div><!-- End Form-Group -->
+                                                            </div><!-- End col -->
+                                                        </div> <!-- End Row -->
+                                                    </form>
+                                                </div>
+                                            </div>
+                                             <div role="tabpanel" class="tab-pane" id="password">
+                                                 <div class="white-box">
+                                                     <div class="form-title">
+                                                        <h3 class="title">
+                                                            ﻛﻠﻤﺔ اﻟﻤﺮﻭﺭ
+                                                        </h3>
+                                                    </div>
+                                                    <form class="form person-info" >
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <div class="form-group">
+                                                                    <input type="file" class="form-control upload" name="bookImage" id="bookImage"(change)="uploadImageService.fileChangeEvent($event)">
+                                                                    <div class="chose-file ">
+                                                                       <p class="p">ﻗﻢ ﺑﺮﻓﻊ اﻟﺼﻮﺭﻩ اﻟﺸﺨﺼﻴﻪ</p>
+                                                                    </div>
+                                                                   
+                                                                </div><!-- End Form-Group -->
+                                                            </div><!-- End col -->
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label for="username">
+                                                                        اسم المستخدم
+                                                                    </label>
+                                                                    <input type="text" id="username" name="userName" [(ngModel)]="user.username"  class="form-control" value="test" >
+                                                                </div><!-- End Form-Group -->
+                                                            </div><!-- End col -->
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label for="password">
+                                                                        ﻛﻠﻤﺔ اﻟﻤﺮﻭﺭ
+                                                                    </label>
+                                                                    <input type="password" id="password" name="pass" class="form-control" [(ngModel)]="user.password"  value="test" >
+                                                                </div><!-- End Form-Group -->
+                                                            </div><!-- End col -->
+                                                            <div class="col-md-12">
+                                                                <div class="form-group">
+                                                                    <button class="custom-btn btn-block" type="submit" (click)="update_image_andPassword()">
+                                                                        ﺣﻔﻆ اﻟﺘﻌﺪﻳﻼﺕ  
+                                                                    </button>
+                                                                </div><!-- End Form-Group -->
+                                                            </div><!-- End col -->
+                                                         </div> <!-- End Row -->
+                                                     </form>   
+                                                 </div>
+                                            </div>
+                                        </div>
+                                    </div><!-- End col -->        
+                                </div><!-- End Tabs -->
+                            </div><!-- End row -->
+                        </div><!-- End container -->
+                    </section><!-- End Section -->
+                </div><!--End page-content-->

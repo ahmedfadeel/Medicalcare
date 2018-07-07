@@ -1,0 +1,109 @@
+ <div class="page-header">
+                    <div class="container">
+                        <ol class="breadcrumb">
+                            <li><a routerLink="/about-us">الرئيسية</a></li>
+                            <li class="active">الملف الشخصي </li>
+                        </ol>
+                    </div><!-- End container -->
+                </div>
+                <div class="page-content">
+				     
+                    <section class="section-lg">
+					     <div *ngIf="notfound_Doctor" style="color:red;">
+										حدث مشكله فى السيرفر لا يمكن تحميل معلومات الطبييب 
+									</div>
+                        <div class="container" >
+                            <div class="row"  *ngIf="!notfound_Doctor"  >
+                                <div class="col-md-6">
+								   
+                                    <div class="white-box person-profile">
+                                        <div class="form-title">
+                                            <h3 class="title">
+                                                المعلومات الشخصيه
+                                            </h3>
+                                        </div>
+                                        <p>
+                                            <i class="fa fa-minus"></i>
+                                            <span>:العنوان</span>
+                                            {{doctor.goverment}} , {{doctor.center}} , {{doctor.city}}
+                                        </p>
+                                        <p>
+                                            <i class="fa fa-minus"></i>
+                                            <span>:تاريخ الميلاد</span>
+                                            {{doctor.bithDate}}
+                                        </p>
+                                       
+                                          <a routerLink="/profile-info">
+                                                <button class="custom-btn update-btn btn-block" name="edit" id="edit"  >
+                                                    تعديل الملف الشخصي
+                                                </button>
+                                           </a>
+                                    </div>
+                                </div><!-- End col -->
+                                <div class="col-md-6">
+                                    
+                                    <div class="white-box">
+                                        <div class="reservation-widget">
+                                            <div class="widget-pic">
+                                                <img [src]="'http://localhost:8088/image/profiles/'+doctor.id+'25712kh55ui.png'" alt="proile-pic">
+                                            </div> <!-- End widget-pic -->
+                                            <div class="widget-contant">
+                                                <h3 class="title-lg" >د/  {{  doctor.name}}   </h3>                          <p>{{doctor.department}}-{{doctor.fauclty}} </p>
+                                            </div> <!-- End Widget-contant -->
+                                        </div> <!-- End reservation-widget -->
+                                    </div> <!-- End white-box -->
+                                    <div class="add-post">
+                                        <p data-toggle="modal" data-target="#myModal">
+                                                اضف نصيحه او تقرير الان
+                                        </p>
+                                    </div> <!-- End Appointmentt -->
+                                    <!-- Modal -->
+                                    <div class="modal fade " id="myModal"  role="dialog">
+                                      <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                          <div class="modal-header">
+                                                <div class="alert alert-success" *ngIf="reportAdded">تمت عمليه الحفظ بنجاح</div>
+
+                                            <h4>اضف نصيحة او تقرير</h4>
+                                          </div>
+                                          <div class="modal-body">
+                                            <form>
+                                                <div class="form-group">
+                                                    <textarea rows="5" placeholder="اكتب هنا نصيحتك او تقريرك..." name="reports1" id="reports1" [(ngModel)]="report.txt" class="form-control"></textarea> 
+                                                </div><!-- End Form-Group -->
+                                              </form>
+                                          </div>
+                                          <div class="modal-footer">
+                                              
+                                                <div class="form-group">
+                                                    <button class="custom-btn" name="addReport" id="addReport" type="submit" (click) ="onAdd_Report()">
+                                                        انشر الان
+                                                    </button>
+                                                </div><!--End Form-group-->
+                                            
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div> <!-- End Col -->
+                            </div><!-- End row -->
+                            <div class="section-lg"></div>
+                                          <!-- Tab panes -->
+                            <div class="col-sm-8 col-sm-offset-2" *ngIf="!noReports">
+							   <div class="scrollbar"   *ngFor = "let report of doctor_reports_List">
+                                    <div class="white-box post">
+                                                  
+                                                        <div class="conc">
+                                                            
+                                                            <p><span>:اﻟﺪﻛﺘﻮﺭ</span> {{doctor.name}} </p>
+															<p><span>:التقرير</span>{{report.txt}} </p>
+                                                           
+                                                        </div> <!-- End conc -->
+                                                       
+                                    </div> <!-- End scrollbar -->
+                              </div>  <!-- End White-box -->
+                                
+                            </div><!-- End col -->
+                        </div><!-- End container -->
+                    </section><!-- End Section -->
+                </div><!--End page-content-->

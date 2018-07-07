@@ -1,0 +1,79 @@
+
+<header class="header home">
+    <div class="container">
+        <a routerLink="/login" class="logo">
+            <img src="assets/images/logo.colored.png">
+            <img src="assets/images/logo.png">
+        </a>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <i class="fa fa-bars"></i>
+        </button>
+        <div class="top-navbar">
+            <nav class="collapse collapsing navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li *ngIf="!loggedIn"  routerLinkActive="active"
+                        [routerLinkActiveOptions]="{exact:true}">
+                        <a routerLink="/login" class="active">
+                            دخول
+                        </a>
+                    </li>
+                    <li routerLinkActive="active" *ngIf="loggedIn_reciptionist && loggedIn">
+                        <a routerLink="/reciptionist">
+                            موظف الاستقبال 
+                        </a>
+                    </li>
+                    <li routerLinkActive="active">
+                        <a routerLink="/about-us">
+                            اتصل بنا
+                        </a>
+                    </li>
+                    <li routerLinkActive="active" >
+                        <a routerLink="/signup-patient">
+                            تسجيل حساب مريض 
+                        </a>
+                    </li>
+					 <li routerLinkActive="active" *ngIf="   loggedIn_patient && loggedIn">
+                        <a routerLink="/profile-patient">
+                           البروفايل 
+                        </a>
+                    </li>
+					<li routerLinkActive="active" *ngIf=" loggedIn_doctor  && loggedIn">
+                        <a routerLink="/profile-doctor">
+                           البروفايل 
+                        </a>
+                    </li>
+					
+					<li routerLinkActive="active" *ngIf=" loggedIn_patient   && loggedIn">
+                        <a routerLink="/profile-patient-info">
+                           تعديل البروفايل
+                        </a>
+                    </li>
+					<li routerLinkActive="active" *ngIf="loggedIn_doctor  &&  loggedIn">
+                        <a routerLink="/profile-info">
+                           تعديل البروفايل
+                        </a>
+                    </li>
+					
+			
+					<li routerLinkActive="active" *ngIf=" loggedIn_doctor  && loggedIn">
+                        <a routerLink="/search-patients">
+                           بحث المرضى 
+                        </a>
+                    </li>
+					
+					
+					<li routerLinkActive="active" *ngIf="loggedIn-doctor  || loggedIn_patient  && loggedIn">
+                        <a routerLink="/search-doctors">
+                            بحث الاطباء
+                        </a>
+                    </li>
+					<li routerLinkActive="active" >
+                        <a routerLink="/login">
+                            تسجيل الخروج
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div><!--End top-navbar--> 
+    </div><!-- End container-->                
+</header><!-- End Header -->
