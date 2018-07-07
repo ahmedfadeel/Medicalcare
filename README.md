@@ -1,40 +1,56 @@
-# Medicalcare
-Getting started
-Make sure you have the Angular CLI installed globally. We use Yarn to manage the dependencies, so we strongly recommend you to use it. you can install it from Here, then run yarn install to resolve all dependencies (might take a minute).
+#Project Title
+One Paragraph of project description goes here
 
-Run ng serve for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
+Getting Started
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-Building the project
-Run ng build to build the project. The build artifacts will be stored in the dist/ directory. Use the -prod flag for a production build.
+#Prerequisites
+What things you need to install the software and how to install them
 
-Functionality overview
-The example application is a social blogging site (i.e. a Medium.com clone) called "Conduit". It uses a custom API for all requests, including authentication. You can view a live demo over at https://angular.realworld.io
+#Give examples
+Installing
+A step by step series of examples that tell you how to get a development env running
 
-General functionality:
+Say what the step will be
 
-Authenticate users via JWT (login/signup pages + logout button on settings page)
-CRU* users (sign up & settings page - no deleting required)
-CRUD Articles
-CR*D Comments on articles (no updating required)
-GET and display paginated lists of articles
-Favorite articles
-Follow other users
-The general page breakdown looks like this:
+Give the example
+And repeat
 
-Home page (URL: /#/ )
-List of tags
-List of articles pulled from either Feed, Global, or by Tag
-Pagination for list of articles
-Sign in/Sign up pages (URL: /#/login, /#/register )
-Uses JWT (store the token in localStorage)
-Authentication can be easily switched to session/cookie based
-Settings page (URL: /#/settings )
-Editor page to create/edit articles (URL: /#/editor, /#/editor/article-slug-here )
-Article page (URL: /#/article/article-slug-here )
-Delete article button (only shown to article's author)
-Render markdown from server client side
-Comments section at bottom of page
-Delete comment button (only shown to comment's author)
-Profile page (URL: /#/profile/:username, /#/profile/:username/favorites )
-Show basic user info
-List of articles populated from author's created articles or author's favorited articles
+until finished
+End with an example of getting some data out of the system or using it for a little demo
+
+#Running the tests
+Explain how to run the automated tests for this system
+
+Break down into end to end tests
+Explain what these tests test and why
+
+Give an example
+And coding style tests
+Explain what these tests test and why
+
+Give an example
+#Deployment
+Add additional notes about how to deploy this on a live system
+
+#Built With
+Dropwizard - The web framework used
+Maven - Dependency Management
+ROME - Used to generate RSS Feeds
+Contributing
+Please read CONTRIBUTING.md for details on our code of conduct, and the process for submitting pull requests to us.
+
+Versioning
+We use SemVer for versioning. For the versions available, see the tags on this repository.
+
+Authors
+Billie Thompson - Initial work - PurpleBooth
+See also the list of contributors who participated in this project.
+
+License
+This project is licensed under the MIT License - see the LICENSE.md file for details
+
+Acknowledgments
+Hat tip to anyone whose code was used
+Inspiration
+etc
