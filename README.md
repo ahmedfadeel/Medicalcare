@@ -12,7 +12,7 @@ You will need Node.js and npm.
 
 Clone the seed-angular repository using git:
 
-[git clone] (https://github.com/ahmedfadeel/Medicalcare.git)
+[git clone](https://github.com/ahmedfadeel/Medicalcare.git)
 > 'cd seed-angular'
 If you just want to start a new project without the seed-angular commit history then you can do.
 
@@ -55,7 +55,7 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. se the `-prod` flag for a production build.
 
 ## Running unit tests
 
